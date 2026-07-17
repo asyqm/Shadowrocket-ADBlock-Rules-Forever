@@ -1,0 +1,58 @@
+name: Build custom Shadowrocket rules
+
+on:
+  schedule:
+    # GitHub Actions uses UTC. 00:10 UTC = 08:10 Asia/Shanghai.
+    - cron: '10 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout release branch
+        uses: actions/checkout@v4
+        with:
+          ref: release
+
+      - name: Download upstream rule
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_top500_banlist.conf -o upstream_sr_top500_banlist.conf
+
+      - name: Merge custom rules
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          upstream = Path('upstream_sr_top500_banlist.conf').read_text(encoding='utf-8')
+          custom_path = Path('custom_rules.conf')
+          custom = custom_path.read_text(encoding='utf-8').strip() if custom_path.exists() else ''
+
+          marker = '[Rule]'
+          if marker not in upstream:
+              raise SystemExit('Cannot find [Rule] section in upstream config')
+
+          head, tail = upstream.split(marker, 1)
+          custom_block = ''
+          if custom:
+              nl = chr(10)
+              custom_block = nl + '# ---- custom rules: start ----' + nl + custom + nl + '# ---- custom rules: end ----' + nl
+
+          output = head + marker + custom_block + tail
+          Path('my_sr_top500_banlist.conf').write_text(output, encoding='utf-8')
+          PY
+
+      - name: Commit generated rule
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add my_sr_top500_banlist.conf
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+          else
+            git commit -m 'Build custom Shadowrocket rules'
+            git push origin release
+          fi
