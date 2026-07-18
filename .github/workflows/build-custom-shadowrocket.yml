@@ -2,8 +2,10 @@ name: Build custom Shadowrocket rules
 
 on:
   schedule:
-    # GitHub Actions uses UTC. 00:10 UTC = 08:10 Asia/Shanghai.
-    - cron: '10 0 * * *'
+    # Run after the upstream project refreshes its rules around 08:00 Beijing time.
+    # GitHub scheduled workflows are best-effort and may still be delayed.
+    - cron: '30 8 * * *'
+      timezone: 'Asia/Shanghai'
   workflow_dispatch:
 
 permissions:
