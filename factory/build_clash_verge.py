@@ -6,8 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-PROFILE_OUTPUT = ROOT.parent / 'clash_verge_whitelist.yaml'
-BITZNET_RULES_OUTPUT = ROOT.parent / 'clash_verge_bitznet_rules.yaml'
+OUTPUT = ROOT.parent / 'clash_verge_whitelist.yaml'
 
 
 def is_ip_network(value):
@@ -57,53 +56,45 @@ def append_unique(target, seen, rules):
         target.append(rule)
 
 
-def render_rules(proxy_policy, include_fallback):
+def render_rules():
     rules = []
     seen = set()
 
-    append_unique(rules, seen, read_rules('resultant/ad.list', 'REJECT'))
     append_unique(rules, seen, read_rules('manual_reject.txt', 'REJECT'))
+    append_unique(rules, seen, read_rules('resultant/ad.list', 'REJECT'))
 
     append_unique(rules, seen, read_rules('manual_direct.txt', 'DIRECT'))
-
-    append_unique(rules, seen, read_rules('manual_proxy.txt', proxy_policy))
-    append_unique(rules, seen, read_rules('manual_gfwlist.txt', proxy_policy))
-
     append_unique(rules, seen, read_rules('resultant/top500_direct.list', 'DIRECT'))
-    append_unique(rules, seen, read_rules('resultant/gfw.list', proxy_policy))
+
+    append_unique(rules, seen, read_rules('manual_proxy.txt', 'PROXY'))
+    append_unique(rules, seen, read_rules('manual_gfwlist.txt', 'PROXY'))
+    append_unique(rules, seen, read_rules('resultant/gfw.list', 'PROXY'))
 
     rules.extend([
         '# Apple News',
-        f'DOMAIN-SUFFIX,apple.news,{proxy_policy}',
-        f'DOMAIN-SUFFIX,news-edge.apple.com,{proxy_policy}',
-        f'DOMAIN-SUFFIX,news-events.apple.com,{proxy_policy}',
-        '# China direct',
+        'DOMAIN-SUFFIX,apple.news,PROXY',
+        'DOMAIN-SUFFIX,news-edge.apple.com,PROXY',
+        'DOMAIN-SUFFIX,news-events.apple.com,PROXY',
+        '# China direct and fallback proxy',
         'DOMAIN-SUFFIX,cn,DIRECT',
         'GEOIP,CN,DIRECT',
+        'MATCH,PROXY',
     ])
-
-    if include_fallback:
-        rules.extend([
-            '# Fallback proxy',
-            f'MATCH,{proxy_policy}',
-        ])
-
     return rules
 
 
-def indent_list(rules, spaces=2):
-    prefix = ' ' * spaces
+def indent_rules(rules):
     lines = []
     for rule in rules:
         if rule.startswith('#'):
-            lines.append(f'{prefix}{rule}')
+            lines.append(f'  {rule}')
         else:
-            lines.append(f'{prefix}- {rule}')
+            lines.append(f'  - {rule}')
     return '\n'.join(lines)
 
 
-def render_profile():
-    rules = render_rules(proxy_policy='PROXY', include_fallback=True)
+def main():
+    rules = render_rules()
     content = f"""# Clash Verge / Mihomo 配置
 # Generated from Shadowrocket-ADBlock-Rules-Forever at {time.strftime("%Y-%m-%d %H:%M:%S")}
 #
@@ -184,34 +175,9 @@ proxy-groups:
     tolerance: 50
 
 rules:
-{indent_list(rules)}
+{indent_rules(rules)}
 """
-    PROFILE_OUTPUT.write_text(content, encoding='utf-8')
-
-
-def render_bitznet_rules():
-    rules = render_rules(proxy_policy='Bitz Net', include_fallback=False)
-    content = f"""# Clash Verge Profile Enhancement Rules
-# Generated from Shadowrocket-ADBlock-Rules-Forever at {time.strftime("%Y-%m-%d %H:%M:%S")}
-#
-# 使用方法：
-# 1. 保留 Clash Verge 中现有的 Bitz+Net 订阅。
-# 2. 在 Bitz+Net 订阅的 Rules Enhancement/编辑规则中使用本文件内容。
-# 3. 本文件只前插规则，不包含节点和最终 MATCH，避免覆盖原订阅的节点与兜底规则。
-
-prepend:
-{indent_list(rules)}
-
-append: []
-
-delete: []
-"""
-    BITZNET_RULES_OUTPUT.write_text(content, encoding='utf-8')
-
-
-def main():
-    render_profile()
-    render_bitznet_rules()
+    OUTPUT.write_text(content, encoding='utf-8')
 
 
 if __name__ == '__main__':

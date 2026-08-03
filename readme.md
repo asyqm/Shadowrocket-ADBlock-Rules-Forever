@@ -53,7 +53,6 @@
 [懒人配置](#懒人配置) | 国外网站 | 国内网站  
 [懒人配置（含策略组）](#懒人配置-含策略组) | 国外网站 | 国内网站  
 [Clash Verge 白名单配置](#clash-verge-白名单配置) | 其他境外网站 | 中国网站、top500 可直连网站
-[Clash Verge Bitz+Net 规则增强](#clash-verge-bitznet-规则增强) | 其他境外网站 | 中国网站、top500 可直连网站
 
 - 以上所有规则，局域网内请求均直连。
 - 可以下载多个规则切换使用。
@@ -318,16 +317,6 @@ INTP | Jack of all trades | I use Arch BTW
 - 规则由本项目的 GFWList、广告、top500、手工直连/代理列表生成
 
 规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/clash_verge_whitelist.yaml>
-
-## Clash Verge Bitz+Net 规则增强
-
-面向现有 `Bitz+Net` 订阅的 Clash Verge 规则增强文件。它不是完整 Profile，不包含节点订阅、不包含 `MATCH` 兜底，只把规则前插到现有订阅前面，继续复用原订阅里的 `Bitz Net` 策略组和节点。
-
-- 适合已经在 Clash Verge 中导入 `Bitz+Net` 订阅的场景
-- 使用当前订阅实际策略组名 `Bitz Net`
-- 通过订阅的 Rules Enhancement/编辑规则使用，而不是作为新的 Profile URL 导入
-
-规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/clash_verge_bitznet_rules.yaml>
 
 
 ## 鸣谢
