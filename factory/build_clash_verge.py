@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import ipaddress
+import json
 import time
 from pathlib import Path
 
@@ -8,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 PROFILE_OUTPUT = ROOT.parent / 'clash_verge_whitelist.yaml'
 BITZNET_RULES_OUTPUT = ROOT.parent / 'clash_verge_bitznet_rules.yaml'
+BITZNET_SCRIPT_OUTPUT = ROOT.parent / 'clash_verge_bitznet_script.js'
 
 
 def is_ip_network(value):
@@ -209,9 +211,58 @@ delete: []
     BITZNET_RULES_OUTPUT.write_text(content, encoding='utf-8')
 
 
+def render_bitznet_script():
+    rules = [
+        rule
+        for rule in render_rules(proxy_policy='__PROXY_POLICY__', include_fallback=False)
+        if not rule.startswith('#')
+    ]
+    content = f"""// Clash Verge Profile Enhancement Script
+// Generated from Shadowrocket-ADBlock-Rules-Forever at {time.strftime("%Y-%m-%d %H:%M:%S")}
+//
+// 使用方法：
+// 1. 保留 Clash Verge 中现有的 Bitz+Net 订阅。
+// 2. 在 Bitz+Net 订阅的 Script Enhancement/编辑脚本中使用本文件内容。
+// 3. 脚本会读取当前订阅已有 rules，已有规则不会重复前插。
+
+const PREPEND_RULES = {json.dumps(rules, ensure_ascii=False, indent=2)};
+
+function pickProxyPolicy(config) {{
+  const groups = Array.isArray(config["proxy-groups"]) ? config["proxy-groups"] : [];
+  const names = groups.map((group) => group && group.name).filter(Boolean);
+
+  if (names.includes("Bitz Net")) return "Bitz Net";
+  if (names.includes("PROXY")) return "PROXY";
+  if (names.includes("Proxy")) return "Proxy";
+  if (names.length > 0) return names[0];
+  return "DIRECT";
+}}
+
+function main(config, profileName) {{
+  const currentRules = Array.isArray(config.rules) ? config.rules : [];
+  const existingRules = new Set(currentRules);
+  const generatedRules = new Set();
+  const proxyPolicy = pickProxyPolicy(config);
+  const prependRules = [];
+
+  for (const template of PREPEND_RULES) {{
+    const rule = template.replaceAll("__PROXY_POLICY__", proxyPolicy);
+    if (existingRules.has(rule) || generatedRules.has(rule)) continue;
+    generatedRules.add(rule);
+    prependRules.push(rule);
+  }}
+
+  config.rules = prependRules.concat(currentRules);
+  return config;
+}}
+"""
+    BITZNET_SCRIPT_OUTPUT.write_text(content, encoding='utf-8')
+
+
 def main():
     render_profile()
     render_bitznet_rules()
+    render_bitznet_script()
 
 
 if __name__ == '__main__':
