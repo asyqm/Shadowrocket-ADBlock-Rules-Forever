@@ -52,6 +52,7 @@
 [仅去广告规则](#仅去广告规则) |   |  
 [懒人配置](#懒人配置) | 国外网站 | 国内网站  
 [懒人配置（含策略组）](#懒人配置-含策略组) | 国外网站 | 国内网站  
+[Clash Verge 白名单配置](#clash-verge-白名单配置) | 其他境外网站 | 中国网站、top500 可直连网站
 
 - 以上所有规则，局域网内请求均直连。
 - 可以下载多个规则切换使用。
@@ -306,6 +307,16 @@ INTP | Jack of all trades | I use Arch BTW
 规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/lazy_group.conf>
 
 ![二维码](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/figure/lazy_group.png)
+
+## Clash Verge 白名单配置
+
+面向 Clash Verge / Mihomo 的 YAML 配置。默认策略是中国网站和 top500 可直连网站直连，广告规则拒绝，其余未知境外流量走代理；相比 Shadowrocket 黑名单默认直连，这个策略更适合 Slack、OpenAI、附件上传等容易被直连误伤的桌面应用。
+
+- 需要先把配置中的 `proxy-providers.subscription.url` 替换成你自己的节点订阅地址
+- 支持 Clash Verge 直接导入 YAML
+- 规则由本项目的 GFWList、广告、top500、手工直连/代理列表生成
+
+规则地址：<https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/clash_verge_whitelist.yaml>
 
 
 ## 鸣谢
