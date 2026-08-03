@@ -1,5 +1,5 @@
 # Clash Verge / Mihomo 配置
-# Generated from Shadowrocket-ADBlock-Rules-Forever at 2026-08-03 21:12:43
+# Generated from Shadowrocket-ADBlock-Rules-Forever at 2026-08-03 16:17:16
 #
 # 使用方法：
 # 1. 将 proxy-providers.subscription.url 替换为你的节点订阅地址。
@@ -78,6 +78,267 @@ proxy-groups:
     tolerance: 50
 
 rules:
+  # 手工定义的 Reject 列表
+  #待反馈是否误杀
+  - DOMAIN-SUFFIX,ad.12306.cn,REJECT
+  #百度（可能有多余项）
+  - DOMAIN-SUFFIX,eclick.baidu.com,REJECT
+  - DOMAIN-SUFFIX,entry.baidu.com,REJECT
+  - DOMAIN-SUFFIX,hmma.baidu.com,REJECT
+  - DOMAIN-SUFFIX,mobads-logs.baidu.com,REJECT
+  - DOMAIN-SUFFIX,mobads.baidu.com,REJECT
+  - DOMAIN-SUFFIX,mtj.baidu.com,REJECT
+  - DOMAIN-SUFFIX,nsclick.baidu.com,REJECT
+  - DOMAIN-SUFFIX,static.tieba.baidu.com,REJECT
+  - DOMAIN-SUFFIX,ucstat.baidu.com,REJECT
+  - DOMAIN-SUFFIX,union.baidu.com,REJECT
+  - DOMAIN-SUFFIX,imageplus.baidu.com,REJECT
+  - DOMAIN-SUFFIX,t10.baidu.com,REJECT
+  - DOMAIN-SUFFIX,t11.baidu.com,REJECT
+  - DOMAIN-SUFFIX,t12.baidu.com,REJECT
+  # Youku & Tudou
+  - DOMAIN-SUFFIX,actives.youku.com,REJECT
+  - DOMAIN-SUFFIX,ad.api.3g.tudou.com,REJECT
+  - DOMAIN-SUFFIX,ad.api.3g.youku.com,REJECT
+  - DOMAIN-SUFFIX,ad.api.mobile.youku.com,REJECT
+  - DOMAIN-SUFFIX,ad.mobile.youku.com,REJECT
+  - DOMAIN-SUFFIX,a-dxk.play.api.3g.youku.com,REJECT
+  - DOMAIN-SUFFIX,b.smartvideo.youku.com,REJECT
+  - DOMAIN-SUFFIX,c.yes.youku.com,REJECT
+  - DOMAIN-SUFFIX,das.api.youku.com,REJECT
+  - DOMAIN-SUFFIX,das.mobile.youku.com,REJECT
+  - DOMAIN-SUFFIX,dev-push.m.youku.com,REJECT
+  - DOMAIN-SUFFIX,dl.g.youku.com,REJECT
+  - DOMAIN-SUFFIX,dmapp.youku.com,REJECT
+  - DOMAIN-SUFFIX,gamex.mobile.youku.com,REJECT
+  - DOMAIN-SUFFIX,hudong.pl.youku.com,REJECT
+  - DOMAIN-SUFFIX,huodong.pl.youku.com,REJECT
+  - DOMAIN-SUFFIX,huodong.vip.youku.com,REJECT
+  - DOMAIN-SUFFIX,hz.youku.com,REJECT
+  - DOMAIN-SUFFIX,iyes.youku.com,REJECT
+  - DOMAIN-SUFFIX,l.ykimg.com,REJECT
+  - DOMAIN-SUFFIX,lstat.youku.com,REJECT
+  - DOMAIN-SUFFIX,m.yes.youku.com,REJECT
+  - DOMAIN-SUFFIX,mobilemsg.youku.com,REJECT
+  - DOMAIN-SUFFIX,msg.youku.com,REJECT
+  - DOMAIN-SUFFIX,myes.youku.com,REJECT
+  - DOMAIN-SUFFIX,p.l.youku.com,REJECT
+  - DOMAIN-SUFFIX,passport-log.youku.com,REJECT
+  - DOMAIN-SUFFIX,p-log.ykimg.com,REJECT
+  - DOMAIN-SUFFIX,push.m.youku.com,REJECT
+  - DOMAIN-SUFFIX,r.l.youku.com,REJECT
+  - DOMAIN-SUFFIX,s.p.youku.com,REJECT
+  - DOMAIN-SUFFIX,sdk.api.gamex.mobile.youku.com,REJECT
+  - DOMAIN-SUFFIX,sdk.m.youku.com,REJECT
+  - DOMAIN-SUFFIX,stat.youku.com,REJECT
+  - DOMAIN-SUFFIX,store.tv.api.3g.youku.com,REJECT
+  - DOMAIN-SUFFIX,store.xl.api.3g.youku.com,REJECT
+  - DOMAIN-SUFFIX,tdrec.youku.com,REJECT
+  - DOMAIN-SUFFIX,test.ott.youku.com,REJECT
+  - DOMAIN-SUFFIX,urchin.lstat.youku.com,REJECT
+  - DOMAIN-SUFFIX,v.l.youku.com,REJECT
+  - DOMAIN-SUFFIX,val.api.youku.com,REJECT
+  - DOMAIN-SUFFIX,wan.youku.com,REJECT
+  - DOMAIN-SUFFIX,ykatr.youku.com,REJECT
+  - DOMAIN-SUFFIX,ykrec.youku.com,REJECT
+  # Youtube
+  - DOMAIN-SUFFIX,azabu-u.ac.jp,REJECT
+  - DOMAIN-SUFFIX,couchcoaster.jp,REJECT
+  - DOMAIN-SUFFIX,delivery.dmkt-sp.jp,REJECT
+  - DOMAIN-SUFFIX,ehg-youtube.hitbox.com,REJECT
+  - DOMAIN-SUFFIX,m-78.jp,REJECT
+  - DOMAIN-SUFFIX,nichibenren.or.jp,REJECT
+  - DOMAIN-SUFFIX,nicorette.co.kr,REJECT
+  # 未知广告 来自#49反馈
+  - DOMAIN-SUFFIX,stats.chinaz.com,REJECT
+  #站长统计
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  #广告联盟（可能有多余项）
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,zhihu-analytics.zhihu.com,REJECT
+  - DOMAIN-SUFFIX,log.cmbchina.com,REJECT
+  - DOMAIN-SUFFIX,api.segment.io,REJECT
+  - DOMAIN-SUFFIX,api.instabug.com,REJECT
+  - DOMAIN-SUFFIX,adlog.flurry.com,REJECT
+  - DOMAIN-SUFFIX,ads.flurry.com,REJECT
+  - DOMAIN-SUFFIX,sd.domob.cn,REJECT
+  - DOMAIN-SUFFIX,adjust.com,REJECT
+  - DOMAIN-SUFFIX,adjust.io,REJECT
+  - DOMAIN-SUFFIX,beacon.tingyun.com,REJECT
+  - DOMAIN-SUFFIX,cmcore.com,REJECT
+  - DOMAIN-SUFFIX,coremetrics.com,REJECT
+  - DOMAIN-SUFFIX,irs01.com,REJECT
+  - DOMAIN-SUFFIX,madmini.com,REJECT
+  - DOMAIN-SUFFIX,optimizelyapis.com,REJECT
+  - DOMAIN-SUFFIX,sitemeter.com,REJECT
+  - DOMAIN-SUFFIX,wrating.com,REJECT
+  - DOMAIN-SUFFIX,99click.com,REJECT
+  - DOMAIN-SUFFIX,acs86.com,REJECT
+  - DOMAIN-SUFFIX,adchina.com,REJECT
+  - DOMAIN-SUFFIX,adcome.cn,REJECT
+  - DOMAIN-SUFFIX,adinfuse.com,REJECT
+  - DOMAIN-SUFFIX,adsmogo.org,REJECT
+  - DOMAIN-SUFFIX,aduu.cn,REJECT
+  - DOMAIN-SUFFIX,advertising.com,REJECT
+  - DOMAIN-SUFFIX,adview.cn,REJECT
+  - DOMAIN-SUFFIX,adwhirl.com,REJECT
+  - DOMAIN-SUFFIX,adwo.com,REJECT
+  - DOMAIN-SUFFIX,adxmi.com,REJECT
+  - DOMAIN-SUFFIX,adzerk.net,REJECT
+  - DOMAIN-SUFFIX,allyes.com,REJECT
+  - DOMAIN-SUFFIX,anquan.org,REJECT
+  - DOMAIN-SUFFIX,appads.com,REJECT
+  - DOMAIN-SUFFIX,applifier.com,REJECT
+  - DOMAIN-SUFFIX,applovin.com,REJECT
+  - DOMAIN-SUFFIX,applvn.com,REJECT
+  - DOMAIN-SUFFIX,ironsrc.com,REJECT
+  - DOMAIN-SUFFIX,app-measurement.com,REJECT
+  - DOMAIN-SUFFIX,pangle.com,REJECT
+  - DOMAIN-SUFFIX,unityads.com,REJECT
+  - DOMAIN-SUFFIX,chartboost.com,REJECT
+  - DOMAIN-SUFFIX,clicktracks.com,REJECT
+  - DOMAIN-SUFFIX,clickzs.com,REJECT
+  - DOMAIN-SUFFIX,guohead.com,REJECT
+  - DOMAIN-SUFFIX,guomob.com,REJECT
+  - DOMAIN-SUFFIX,immob.cn,REJECT
+  - DOMAIN-SUFFIX,inmobi.com,REJECT
+  - DOMAIN-SUFFIX,intely.cn,REJECT
+  - DOMAIN-SUFFIX,ipinyou.com,REJECT
+  - DOMAIN-SUFFIX,localytics.com,REJECT
+  - DOMAIN-SUFFIX,mediav.com,REJECT
+  - DOMAIN-SUFFIX,mobclix.com,REJECT
+  - DOMAIN-SUFFIX,optaim.com,REJECT
+  - DOMAIN-SUFFIX,quantserve.com,REJECT
+  - DOMAIN-SUFFIX,responsys.net,REJECT
+  - DOMAIN-SUFFIX,serving-sys.com,REJECT
+  - DOMAIN-SUFFIX,smartmad.com,REJECT
+  - DOMAIN-SUFFIX,smartadserver.com,REJECT
+  - DOMAIN-SUFFIX,sponsorpay.com,REJECT
+  - DOMAIN-SUFFIX,switchadhub.com,REJECT
+  - DOMAIN-SUFFIX,thoughtleadr.com,REJECT
+  - DOMAIN-SUFFIX,unimhk.com,REJECT
+  - DOMAIN-SUFFIX,unlitui.com,REJECT
+  - DOMAIN-SUFFIX,uyunad.com,REJECT
+  - DOMAIN-SUFFIX,vamaker.com,REJECT
+  - DOMAIN-SUFFIX,waps.cn,REJECT
+  - DOMAIN-SUFFIX,wiyun.com,REJECT
+  - DOMAIN-SUFFIX,wooboo.com.cn,REJECT
+  - DOMAIN-SUFFIX,wqmobile.com,REJECT
+  - DOMAIN-SUFFIX,youmi.net,REJECT
+  - DOMAIN-SUFFIX,zhiziyun.com,REJECT
+  - DOMAIN-SUFFIX,segment.com,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  #新浪（可能有多余项）
+  - DOMAIN-SUFFIX,ad.sina.com.cn,REJECT
+  - DOMAIN-SUFFIX,adm.leju.sina.com.cn,REJECT
+  - DOMAIN-SUFFIX,atm.sina.com,REJECT
+  - DOMAIN-SUFFIX,dcads.sina.com.cn,REJECT
+  - DOMAIN-SUFFIX,sax.sina.cn,REJECT
+  - DOMAIN-SUFFIX,sax.sina.com.cn,REJECT
+  - DOMAIN-SUFFIX,tjs.sjs.sinajs.cn,REJECT
+  #微博（可能有多余项）
+  - DOMAIN-SUFFIX,c.biz.weibo.com,REJECT
+  - DOMAIN-SUFFIX,game.weibo.com,REJECT
+  - DOMAIN-SUFFIX,c.wcpt.biz.weibo.com,REJECT
+  - DOMAIN-SUFFIX,s.alitui.weibo.com,REJECT
+  - DOMAIN-SUFFIX,zc.biz.weibo.com,REJECT
+  - DOMAIN-SUFFIX,zymo.mps.weibo.com,REJECT
+  - DOMAIN-SUFFIX,game.weibo.cn,REJECT
+  - DOMAIN-SUFFIX,m.game.weibo.cn,REJECT
+  - DOMAIN-SUFFIX,promote.biz.weibo.cn,REJECT
+  - DOMAIN-SUFFIX,adimg.mobile.sina.cn,REJECT
+  - DOMAIN-SUFFIX,newspush.sinajs.cn,REJECT
+  - DOMAIN-SUFFIX,sdkapp.mobile.sina.cn,REJECT
+  - DOMAIN-SUFFIX,sdkclick.mobile.sina.cn,REJECT
+  - DOMAIN-SUFFIX,trends.mobile.sina.cn,REJECT
+  - DOMAIN-SUFFIX,wbapp.mobile.sina.cn,REJECT
+  - DOMAIN-SUFFIX,wbclick.mobile.sina.cn,REJECT
+  - DOMAIN-SUFFIX,wbpctips.mobile.sina.cn,REJECT
+  - DOMAIN-SUFFIX,ota.pay.mobile.sina.cn,REJECT
+  - DOMAIN-SUFFIX,pay.mobile.sina.cn,REJECT
+  # 有道词典
+  - DOMAIN-SUFFIX,gorgon.youdao.com,REJECT
+  - DOMAIN-SUFFIX,impservice.youdao.com,REJECT
+  # 爱奇艺 PPS（可能有多余项）
+  - DOMAIN-SUFFIX,ad.m.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,afp.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,api.cupid.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,c.uaa.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,cloudpush.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,cm.passport.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,emoticon.sns.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,gamecenter.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,hotchat-im.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,ifacelog.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,mbdlog.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,meta.video.qiyi.com,REJECT
+  - DOMAIN-SUFFIX,paopao.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,policy.video.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,rcd.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,cmts.iqiyi.com,REJECT
+  - DOMAIN-SUFFIX,data.video.qiyi.com,REJECT
+  - DOMAIN-SUFFIX,msg.71.am,REJECT
+  - DOMAIN-SUFFIX,msga.cupid.iqiyi.com,REJECT
+  - IP-CIDR,101.227.14.80/29,REJECT,no-resolve
+  - IP-CIDR,101.227.200.0/22,REJECT,no-resolve
+  - IP-CIDR,112.13.64.0/22,REJECT,no-resolve
+  - IP-CIDR,112.253.36.0/24,REJECT,no-resolve
+  - IP-CIDR,117.139.16.0/22,REJECT,no-resolve
+  - IP-CIDR,117.139.18.141/22,REJECT,no-resolve
+  - IP-CIDR,119.188.13.32/29,REJECT,no-resolve
+  - IP-CIDR,119.188.172.192/28,REJECT,no-resolve
+  - IP-CIDR,119.188.173.0/27,REJECT,no-resolve
+  - IP-CIDR,119.188.43.61/32,REJECT,no-resolve
+  - IP-CIDR,123.125.116.0/22,REJECT,no-resolve
+  - IP-CIDR,123.125.117.0/22,REJECT,no-resolve
+  - IP-CIDR,123.130.122.128/28,REJECT,no-resolve
+  - IP-CIDR,183.221.244.0/22,REJECT,no-resolve
+  - IP-CIDR,183.221.247.189/22,REJECT,no-resolve
+  - IP-CIDR,27.221.89.128/28,REJECT,no-resolve
+  - IP-CIDR,60.211.171.128/29,REJECT,no-resolve
+  - IP-CIDR,60.211.211.1/32,REJECT,no-resolve
+  #99 提交的公告 未测试是否误杀
+  #以下为杭州公交 APP 的广告调用地址，含京东广告
+  - DOMAIN-SUFFIX,im-x.jd.com,REJECT
+  - DOMAIN-SUFFIX,ad.ipadview.com,REJECT
+  #以下为某些不可描述网站加载的乱七八糟广告
+  - DOMAIN-SUFFIX,maizhenai.cn,REJECT
+  - DOMAIN-SUFFIX,paomifen.cn,REJECT
+  - DOMAIN-SUFFIX,songlaoban.cn,REJECT
+  - DOMAIN-SUFFIX,09mk.cn,REJECT
+  - DOMAIN-SUFFIX,hepengshan.cn,REJECT
+  - DOMAIN-SUFFIX,epsilon.com,REJECT
+  - DOMAIN-SUFFIX,storygize.net,REJECT
+  - DOMAIN-SUFFIX,connexity.net,REJECT
+  - DOMAIN-SUFFIX,liadm.com,REJECT
+  - DOMAIN-SUFFIX,agkn.com,REJECT
+  - DOMAIN-SUFFIX,exelator.com,REJECT
+  - DOMAIN-SUFFIX,dualstack.adsame-1421766300.ap-southeast-1.elb.amazonaws.com,REJECT
+  - DOMAIN-SUFFIX,amaoshe.cn,REJECT
+  - DOMAIN-SUFFIX,yeshoutuan.cn,REJECT
+  - DOMAIN-SUFFIX,muxq8.cn,REJECT
+  - DOMAIN-SUFFIX,huanshawang.cn,REJECT
+  - DOMAIN-SUFFIX,v85968.cn,REJECT
+  #以下为广告联盟
+  - DOMAIN-SUFFIX,taboola.com,REJECT
+  - DOMAIN-SUFFIX,trc.taboola.com,REJECT
+  #付呗收款码支付后跳转到的广告地址（支付宝内）
+  - DOMAIN-SUFFIX,tuisnake.com,REJECT
+  - DOMAIN-SUFFIX,duiba.com.cn,REJECT
+  - DOMAIN-SUFFIX,dui88.com,REJECT
+  #喜马拉雅跟踪和广告
+  - DOMAIN-SUFFIX,location.ximalaya.com,REJECT
+  - DOMAIN-SUFFIX,adse.ximalaya.com,REJECT
+  - DOMAIN-SUFFIX,xdcs-collector.ximalaya.com,REJECT
+  #广告联盟
+  - DOMAIN-SUFFIX,inmobi.cn,REJECT
+  - DOMAIN-SUFFIX,criteo.com,REJECT
+  #169
+  - DOMAIN-SUFFIX,adx.hupu.com,REJECT
+  - DOMAIN-SUFFIX,kikibt8.com,REJECT
+  - DOMAIN-SUFFIX,kikibt8.xyz,REJECT
+  #用户提交
+  - DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
   # adblock rules refresh time: 2025-02-08 06:13:06
   - DOMAIN-SUFFIX,003store.com,REJECT
   - DOMAIN-SUFFIX,00701059.xyz,REJECT
@@ -2426,7 +2687,6 @@ rules:
   - DOMAIN-SUFFIX,adjug.com,REJECT
   - DOMAIN-SUFFIX,adjuggler.com,REJECT
   - DOMAIN-SUFFIX,adjuggler.yourdictionary.com,REJECT
-  - DOMAIN-SUFFIX,adjust.com,REJECT
   - DOMAIN-SUFFIX,adjustbedevilsweep.com,REJECT
   - DOMAIN-SUFFIX,adjusteddrug.com,REJECT
   - DOMAIN-SUFFIX,adjustmentconfide.com,REJECT
@@ -3294,7 +3554,6 @@ rules:
   - DOMAIN-SUFFIX,advertiseworld.com,REJECT
   - DOMAIN-SUFFIX,advertiseyourgame.com,REJECT
   - DOMAIN-SUFFIX,advertising-cdn.com,REJECT
-  - DOMAIN-SUFFIX,advertising.com,REJECT
   - DOMAIN-SUFFIX,advertisingbanners.com,REJECT
   - DOMAIN-SUFFIX,advertisingbox.com,REJECT
   - DOMAIN-SUFFIX,advertisingiq.com,REJECT
@@ -3344,7 +3603,6 @@ rules:
   - DOMAIN-SUFFIX,adwalte.info,REJECT
   - DOMAIN-SUFFIX,adway.org,REJECT
   - DOMAIN-SUFFIX,adwebone.com,REJECT
-  - DOMAIN-SUFFIX,adwhirl.com,REJECT
   - DOMAIN-SUFFIX,adworldnetwork.com,REJECT
   - DOMAIN-SUFFIX,adworx.at,REJECT
   - DOMAIN-SUFFIX,adworx.nl,REJECT
@@ -3378,7 +3636,6 @@ rules:
   - DOMAIN-SUFFIX,adz.rashflash.com,REJECT
   - DOMAIN-SUFFIX,adz2you.com,REJECT
   - DOMAIN-SUFFIX,adzbazar.com,REJECT
-  - DOMAIN-SUFFIX,adzerk.net,REJECT
   - DOMAIN-SUFFIX,adzerk.s3.amazonaws.com,REJECT
   - DOMAIN-SUFFIX,adzestocp.com,REJECT
   - DOMAIN-SUFFIX,adzhub.com,REJECT
@@ -3613,7 +3870,6 @@ rules:
   - DOMAIN-SUFFIX,agileskincareunrented.com,REJECT
   - DOMAIN-SUFFIX,agisdayra.com,REJECT
   - DOMAIN-SUFFIX,agitatechampionship.com,REJECT
-  - DOMAIN-SUFFIX,agkn.com,REJECT
   - DOMAIN-SUFFIX,agl001.bid,REJECT
   - DOMAIN-SUFFIX,agl002.online,REJECT
   - DOMAIN-SUFFIX,agl003.com,REJECT
@@ -3975,7 +4231,6 @@ rules:
   - DOMAIN-SUFFIX,allusionfussintervention.com,REJECT
   - DOMAIN-SUFFIX,alluviopurreic.com,REJECT
   - DOMAIN-SUFFIX,allworkovergot.com,REJECT
-  - DOMAIN-SUFFIX,allyes.com,REJECT
   - DOMAIN-SUFFIX,allyprimroseidol.com,REJECT
   - DOMAIN-SUFFIX,almareepom.com,REJECT
   - DOMAIN-SUFFIX,almasatten.com,REJECT
@@ -4429,12 +4684,10 @@ rules:
   - DOMAIN-SUFFIX,apostropheammunitioninjure.com,REJECT
   - DOMAIN-SUFFIX,app-analytics-v2.snapchat.com,REJECT
   - DOMAIN-SUFFIX,app-analytics.snapchat.com,REJECT
-  - DOMAIN-SUFFIX,app-measurement.com,REJECT
   - DOMAIN-SUFFIX,app.pendo.io,REJECT
   - DOMAIN-SUFFIX,app.tippp.io,REJECT
   - DOMAIN-SUFFIX,app2.salesmanago.pl,REJECT
   - DOMAIN-SUFFIX,app2up.info,REJECT
-  - DOMAIN-SUFFIX,appads.com,REJECT
   - DOMAIN-SUFFIX,apparatusditchtulip.com,REJECT
   - DOMAIN-SUFFIX,apparelbrandsabotage.com,REJECT
   - DOMAIN-SUFFIX,appboycdn.com,REJECT
@@ -8019,7 +8272,6 @@ rules:
   - DOMAIN-SUFFIX,chart.dk,REJECT
   - DOMAIN-SUFFIX,chartbeat.com,REJECT
   - DOMAIN-SUFFIX,chartbeat.net,REJECT
-  - DOMAIN-SUFFIX,chartboost.com,REJECT
   - DOMAIN-SUFFIX,chaseherbalpasty.com,REJECT
   - DOMAIN-SUFFIX,chassirsaud.com,REJECT
   - DOMAIN-SUFFIX,chastehandkerchiefclassified.com,REJECT
@@ -8540,7 +8792,6 @@ rules:
   - DOMAIN-SUFFIX,clicktraceclick.com,REJECT
   - DOMAIN-SUFFIX,clicktrack.pubmatic.com,REJECT
   - DOMAIN-SUFFIX,clicktrack.ziyu.net,REJECT
-  - DOMAIN-SUFFIX,clicktracks.com,REJECT
   - DOMAIN-SUFFIX,clicktrade.com,REJECT
   - DOMAIN-SUFFIX,clicktrixredirects.com,REJECT
   - DOMAIN-SUFFIX,clicktroute.com,REJECT
@@ -9189,7 +9440,6 @@ rules:
   - DOMAIN-SUFFIX,core.dimatter.ai,REJECT
   - DOMAIN-SUFFIX,coreexperiment.com,REJECT
   - DOMAIN-SUFFIX,coreldrawchina.com,REJECT
-  - DOMAIN-SUFFIX,coremetrics.com,REJECT
   - DOMAIN-SUFFIX,corenotabilityhire.com,REJECT
   - DOMAIN-SUFFIX,corgompaup.com,REJECT
   - DOMAIN-SUFFIX,corgouzaptax.com,REJECT
@@ -9506,7 +9756,6 @@ rules:
   - DOMAIN-SUFFIX,crisphybridforecast.com,REJECT
   - DOMAIN-SUFFIX,crisppennygiggle.com,REJECT
   - DOMAIN-SUFFIX,critariatele.pro,REJECT
-  - DOMAIN-SUFFIX,criteo.com,REJECT
   - DOMAIN-SUFFIX,criteo.net,REJECT
   - DOMAIN-SUFFIX,criticaltriggerweather.com,REJECT
   - DOMAIN-SUFFIX,criticheliumsoothe.com,REJECT
@@ -12004,7 +12253,6 @@ rules:
   - DOMAIN-SUFFIX,doubleclick.com,REJECT
   - DOMAIN-SUFFIX,doubleclick.ctfile.com,REJECT
   - DOMAIN-SUFFIX,doubleclick.de,REJECT
-  - DOMAIN-SUFFIX,doubleclick.net,REJECT
   - DOMAIN-SUFFIX,doublemax.net,REJECT
   - DOMAIN-SUFFIX,doubleonclick.com,REJECT
   - DOMAIN-SUFFIX,doublepimp.com,REJECT
@@ -13621,7 +13869,6 @@ rules:
   - DOMAIN-SUFFIX,executionago.com,REJECT
   - DOMAIN-SUFFIX,executivetumult.com,REJECT
   - DOMAIN-SUFFIX,exelate.com,REJECT
-  - DOMAIN-SUFFIX,exelator.com,REJECT
   - DOMAIN-SUFFIX,exemplarsensor.com,REJECT
   - DOMAIN-SUFFIX,exemplarychemistry.com,REJECT
   - DOMAIN-SUFFIX,exertionbesiege.com,REJECT
@@ -15978,7 +16225,6 @@ rules:
   - DOMAIN-SUFFIX,goodvibe1.com,REJECT
   - DOMAIN-SUFFIX,goodyhitherto.com,REJECT
   - DOMAIN-SUFFIX,googie-anaiytics.com,REJECT
-  - DOMAIN-SUFFIX,google-analytics.com,REJECT
   - DOMAIN-SUFFIX,google-js-01.xyz,REJECT
   - DOMAIN-SUFFIX,google-js-02.xyz,REJECT
   - DOMAIN-SUFFIX,google-js-08.xyz,REJECT
@@ -15991,7 +16237,6 @@ rules:
   - DOMAIN-SUFFIX,googleanalytics.com,REJECT
   - DOMAIN-SUFFIX,googleapi.club,REJECT
   - DOMAIN-SUFFIX,googlehm.cc,REJECT
-  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
   - DOMAIN-SUFFIX,googletagmanager.com,REJECT
   - DOMAIN-SUFFIX,googletagservices.com,REJECT
   - DOMAIN-SUFFIX,googlevads-cn.com,REJECT
@@ -18288,7 +18533,6 @@ rules:
   - DOMAIN-SUFFIX,inmespritr.com,REJECT
   - DOMAIN-SUFFIX,inmhh.com,REJECT
   - DOMAIN-SUFFIX,inminuner.com,REJECT
-  - DOMAIN-SUFFIX,inmobi.com,REJECT
   - DOMAIN-SUFFIX,innbyhqtltpivpg.xyz,REJECT
   - DOMAIN-SUFFIX,inncreasukedrev.info,REJECT
   - DOMAIN-SUFFIX,inner-active.com,REJECT
@@ -18597,7 +18841,6 @@ rules:
   - DOMAIN-SUFFIX,irritablepopcornwanderer.com,REJECT
   - DOMAIN-SUFFIX,irritateinformantmeddle.com,REJECT
   - DOMAIN-SUFFIX,irritationunderage.com,REJECT
-  - DOMAIN-SUFFIX,irs01.com,REJECT
   - DOMAIN-SUFFIX,irs03.com,REJECT
   - DOMAIN-SUFFIX,irtliso.top,REJECT
   - DOMAIN-SUFFIX,irtya.com,REJECT
@@ -20598,7 +20841,6 @@ rules:
   - DOMAIN-SUFFIX,liabilityspend.com,REJECT
   - DOMAIN-SUFFIX,liablematches.com,REJECT
   - DOMAIN-SUFFIX,liabletablesoviet.com,REJECT
-  - DOMAIN-SUFFIX,liadm.com,REJECT
   - DOMAIN-SUFFIX,liambafaying.com,REJECT
   - DOMAIN-SUFFIX,lianmen1.joyyang.com,REJECT
   - DOMAIN-SUFFIX,lianzl.xyz,REJECT
@@ -21928,7 +22170,6 @@ rules:
   - DOMAIN-SUFFIX,mediative.ca,REJECT
   - DOMAIN-SUFFIX,mediative.com,REJECT
   - DOMAIN-SUFFIX,mediatraks.com,REJECT
-  - DOMAIN-SUFFIX,mediav.com,REJECT
   - DOMAIN-SUFFIX,mediaver.com,REJECT
   - DOMAIN-SUFFIX,mediavine.com,REJECT
   - DOMAIN-SUFFIX,mediavoice.com,REJECT
@@ -22429,7 +22670,6 @@ rules:
   - DOMAIN-SUFFIX,mobagent.com,REJECT
   - DOMAIN-SUFFIX,mobantong.oss-cn-hangzhou.aliyuncs.com,REJECT
   - DOMAIN-SUFFIX,mobcardel.top,REJECT
-  - DOMAIN-SUFFIX,mobclix.com,REJECT
   - DOMAIN-SUFFIX,mobdel.com,REJECT
   - DOMAIN-SUFFIX,mobdel2.com,REJECT
   - DOMAIN-SUFFIX,mobexpectationofficially.com,REJECT
@@ -27906,7 +28146,6 @@ rules:
   - DOMAIN-SUFFIX,quantcast.com,REJECT
   - DOMAIN-SUFFIX,quantcount.com,REJECT
   - DOMAIN-SUFFIX,quantoz.xyz,REJECT
-  - DOMAIN-SUFFIX,quantserve.com,REJECT
   - DOMAIN-SUFFIX,quantummetric.com,REJECT
   - DOMAIN-SUFFIX,quanzai.xyz,REJECT
   - DOMAIN-SUFFIX,quarantinedisappearhive.com,REJECT
@@ -30299,7 +30538,6 @@ rules:
   - DOMAIN-SUFFIX,services.hearstmags.com,REJECT
   - DOMAIN-SUFFIX,servicesrc.org,REJECT
   - DOMAIN-SUFFIX,servicetechtracker.com,REJECT
-  - DOMAIN-SUFFIX,serving-sys.com,REJECT
   - DOMAIN-SUFFIX,servingcdn.net,REJECT
   - DOMAIN-SUFFIX,servingserved.com,REJECT
   - DOMAIN-SUFFIX,servingsurroundworldwide.com,REJECT
@@ -30811,7 +31049,6 @@ rules:
   - DOMAIN-SUFFIX,siteimproveanalytics.com,REJECT
   - DOMAIN-SUFFIX,siteimproveanalytics.io,REJECT
   - DOMAIN-SUFFIX,siteintercept.qualtrics.com,REJECT
-  - DOMAIN-SUFFIX,sitemeter.com,REJECT
   - DOMAIN-SUFFIX,siteoid.com,REJECT
   - DOMAIN-SUFFIX,sitesdesbloqueados.com,REJECT
   - DOMAIN-SUFFIX,sitewithg.com,REJECT
@@ -31012,7 +31249,6 @@ rules:
   - DOMAIN-SUFFIX,smart1adserver.com,REJECT
   - DOMAIN-SUFFIX,smart4ads.com,REJECT
   - DOMAIN-SUFFIX,smartads.statsperform.com,REJECT
-  - DOMAIN-SUFFIX,smartadserver.com,REJECT
   - DOMAIN-SUFFIX,smartclip.net,REJECT
   - DOMAIN-SUFFIX,smartcpatrack.com,REJECT
   - DOMAIN-SUFFIX,smartdating.top,REJECT
@@ -31476,7 +31712,6 @@ rules:
   - DOMAIN-SUFFIX,sponsoranimosity.com,REJECT
   - DOMAIN-SUFFIX,sponsorlustrestories.com,REJECT
   - DOMAIN-SUFFIX,sponsormob.com,REJECT
-  - DOMAIN-SUFFIX,sponsorpay.com,REJECT
   - DOMAIN-SUFFIX,sponsorpro.de,REJECT
   - DOMAIN-SUFFIX,sponsors.vuejs.org,REJECT
   - DOMAIN-SUFFIX,spontaneousleave.com,REJECT
@@ -31942,7 +32177,6 @@ rules:
   - DOMAIN-SUFFIX,stormyachiever.com,REJECT
   - DOMAIN-SUFFIX,stormydisconnectedcarsick.com,REJECT
   - DOMAIN-SUFFIX,storners.com,REJECT
-  - DOMAIN-SUFFIX,storygize.net,REJECT
   - DOMAIN-SUFFIX,storyquail.com,REJECT
   - DOMAIN-SUFFIX,storyrelatively.com,REJECT
   - DOMAIN-SUFFIX,storystaffrings.com,REJECT
@@ -32533,7 +32767,6 @@ rules:
   - DOMAIN-SUFFIX,tabloidquantitycosts.com,REJECT
   - DOMAIN-SUFFIX,tabloidsuggest.com,REJECT
   - DOMAIN-SUFFIX,tabloidwept.com,REJECT
-  - DOMAIN-SUFFIX,taboola.com,REJECT
   - DOMAIN-SUFFIX,tackleyoung.com,REJECT
   - DOMAIN-SUFFIX,tackmainly.com,REJECT
   - DOMAIN-SUFFIX,tacticmuseumbed.com,REJECT
@@ -33184,7 +33417,6 @@ rules:
   - DOMAIN-SUFFIX,thoseads.com,REJECT
   - DOMAIN-SUFFIX,thoudroa.net,REJECT
   - DOMAIN-SUFFIX,thoughtgraphicshoarfrost.com,REJECT
-  - DOMAIN-SUFFIX,thoughtleadr.com,REJECT
   - DOMAIN-SUFFIX,thoughtlessindeedopposition.com,REJECT
   - DOMAIN-SUFFIX,thouphouwhad.net,REJECT
   - DOMAIN-SUFFIX,thoupsuk.net,REJECT
@@ -36978,7 +37210,6 @@ rules:
   - DOMAIN-SUFFIX,wrappedproduct.com,REJECT
   - DOMAIN-SUFFIX,wrathful-alternative.com,REJECT
   - DOMAIN-SUFFIX,wrathyblesmol.com,REJECT
-  - DOMAIN-SUFFIX,wrating.com,REJECT
   - DOMAIN-SUFFIX,wrdamoe.icu,REJECT
   - DOMAIN-SUFFIX,wreaksyolkier.com,REJECT
   - DOMAIN-SUFFIX,wreathabble.com,REJECT
@@ -38444,237 +38675,6 @@ rules:
   - DOMAIN-SUFFIX,zzohucf.icu,REJECT
   - DOMAIN-SUFFIX,zztxfj.xyz,REJECT
   - DOMAIN-SUFFIX,zzyjpmh.com,REJECT
-  # 手工定义的 Reject 列表
-  #待反馈是否误杀
-  - DOMAIN-SUFFIX,ad.12306.cn,REJECT
-  #百度（可能有多余项）
-  - DOMAIN-SUFFIX,eclick.baidu.com,REJECT
-  - DOMAIN-SUFFIX,entry.baidu.com,REJECT
-  - DOMAIN-SUFFIX,hmma.baidu.com,REJECT
-  - DOMAIN-SUFFIX,mobads-logs.baidu.com,REJECT
-  - DOMAIN-SUFFIX,mobads.baidu.com,REJECT
-  - DOMAIN-SUFFIX,mtj.baidu.com,REJECT
-  - DOMAIN-SUFFIX,nsclick.baidu.com,REJECT
-  - DOMAIN-SUFFIX,static.tieba.baidu.com,REJECT
-  - DOMAIN-SUFFIX,ucstat.baidu.com,REJECT
-  - DOMAIN-SUFFIX,union.baidu.com,REJECT
-  - DOMAIN-SUFFIX,imageplus.baidu.com,REJECT
-  - DOMAIN-SUFFIX,t10.baidu.com,REJECT
-  - DOMAIN-SUFFIX,t11.baidu.com,REJECT
-  - DOMAIN-SUFFIX,t12.baidu.com,REJECT
-  # Youku & Tudou
-  - DOMAIN-SUFFIX,actives.youku.com,REJECT
-  - DOMAIN-SUFFIX,ad.api.3g.tudou.com,REJECT
-  - DOMAIN-SUFFIX,ad.api.3g.youku.com,REJECT
-  - DOMAIN-SUFFIX,ad.api.mobile.youku.com,REJECT
-  - DOMAIN-SUFFIX,ad.mobile.youku.com,REJECT
-  - DOMAIN-SUFFIX,a-dxk.play.api.3g.youku.com,REJECT
-  - DOMAIN-SUFFIX,b.smartvideo.youku.com,REJECT
-  - DOMAIN-SUFFIX,c.yes.youku.com,REJECT
-  - DOMAIN-SUFFIX,das.api.youku.com,REJECT
-  - DOMAIN-SUFFIX,das.mobile.youku.com,REJECT
-  - DOMAIN-SUFFIX,dev-push.m.youku.com,REJECT
-  - DOMAIN-SUFFIX,dl.g.youku.com,REJECT
-  - DOMAIN-SUFFIX,dmapp.youku.com,REJECT
-  - DOMAIN-SUFFIX,gamex.mobile.youku.com,REJECT
-  - DOMAIN-SUFFIX,hudong.pl.youku.com,REJECT
-  - DOMAIN-SUFFIX,huodong.pl.youku.com,REJECT
-  - DOMAIN-SUFFIX,huodong.vip.youku.com,REJECT
-  - DOMAIN-SUFFIX,hz.youku.com,REJECT
-  - DOMAIN-SUFFIX,iyes.youku.com,REJECT
-  - DOMAIN-SUFFIX,l.ykimg.com,REJECT
-  - DOMAIN-SUFFIX,lstat.youku.com,REJECT
-  - DOMAIN-SUFFIX,m.yes.youku.com,REJECT
-  - DOMAIN-SUFFIX,mobilemsg.youku.com,REJECT
-  - DOMAIN-SUFFIX,msg.youku.com,REJECT
-  - DOMAIN-SUFFIX,myes.youku.com,REJECT
-  - DOMAIN-SUFFIX,p.l.youku.com,REJECT
-  - DOMAIN-SUFFIX,passport-log.youku.com,REJECT
-  - DOMAIN-SUFFIX,p-log.ykimg.com,REJECT
-  - DOMAIN-SUFFIX,push.m.youku.com,REJECT
-  - DOMAIN-SUFFIX,r.l.youku.com,REJECT
-  - DOMAIN-SUFFIX,s.p.youku.com,REJECT
-  - DOMAIN-SUFFIX,sdk.api.gamex.mobile.youku.com,REJECT
-  - DOMAIN-SUFFIX,sdk.m.youku.com,REJECT
-  - DOMAIN-SUFFIX,stat.youku.com,REJECT
-  - DOMAIN-SUFFIX,store.tv.api.3g.youku.com,REJECT
-  - DOMAIN-SUFFIX,store.xl.api.3g.youku.com,REJECT
-  - DOMAIN-SUFFIX,tdrec.youku.com,REJECT
-  - DOMAIN-SUFFIX,test.ott.youku.com,REJECT
-  - DOMAIN-SUFFIX,urchin.lstat.youku.com,REJECT
-  - DOMAIN-SUFFIX,v.l.youku.com,REJECT
-  - DOMAIN-SUFFIX,val.api.youku.com,REJECT
-  - DOMAIN-SUFFIX,wan.youku.com,REJECT
-  - DOMAIN-SUFFIX,ykatr.youku.com,REJECT
-  - DOMAIN-SUFFIX,ykrec.youku.com,REJECT
-  # Youtube
-  - DOMAIN-SUFFIX,azabu-u.ac.jp,REJECT
-  - DOMAIN-SUFFIX,couchcoaster.jp,REJECT
-  - DOMAIN-SUFFIX,delivery.dmkt-sp.jp,REJECT
-  - DOMAIN-SUFFIX,ehg-youtube.hitbox.com,REJECT
-  - DOMAIN-SUFFIX,m-78.jp,REJECT
-  - DOMAIN-SUFFIX,nichibenren.or.jp,REJECT
-  - DOMAIN-SUFFIX,nicorette.co.kr,REJECT
-  # 未知广告 来自#49反馈
-  - DOMAIN-SUFFIX,stats.chinaz.com,REJECT
-  #站长统计
-  #广告联盟（可能有多余项）
-  - DOMAIN-SUFFIX,zhihu-analytics.zhihu.com,REJECT
-  - DOMAIN-SUFFIX,log.cmbchina.com,REJECT
-  - DOMAIN-SUFFIX,api.segment.io,REJECT
-  - DOMAIN-SUFFIX,api.instabug.com,REJECT
-  - DOMAIN-SUFFIX,adlog.flurry.com,REJECT
-  - DOMAIN-SUFFIX,ads.flurry.com,REJECT
-  - DOMAIN-SUFFIX,sd.domob.cn,REJECT
-  - DOMAIN-SUFFIX,adjust.io,REJECT
-  - DOMAIN-SUFFIX,beacon.tingyun.com,REJECT
-  - DOMAIN-SUFFIX,cmcore.com,REJECT
-  - DOMAIN-SUFFIX,madmini.com,REJECT
-  - DOMAIN-SUFFIX,optimizelyapis.com,REJECT
-  - DOMAIN-SUFFIX,99click.com,REJECT
-  - DOMAIN-SUFFIX,acs86.com,REJECT
-  - DOMAIN-SUFFIX,adchina.com,REJECT
-  - DOMAIN-SUFFIX,adcome.cn,REJECT
-  - DOMAIN-SUFFIX,adinfuse.com,REJECT
-  - DOMAIN-SUFFIX,adsmogo.org,REJECT
-  - DOMAIN-SUFFIX,aduu.cn,REJECT
-  - DOMAIN-SUFFIX,adview.cn,REJECT
-  - DOMAIN-SUFFIX,adwo.com,REJECT
-  - DOMAIN-SUFFIX,adxmi.com,REJECT
-  - DOMAIN-SUFFIX,anquan.org,REJECT
-  - DOMAIN-SUFFIX,applifier.com,REJECT
-  - DOMAIN-SUFFIX,applovin.com,REJECT
-  - DOMAIN-SUFFIX,applvn.com,REJECT
-  - DOMAIN-SUFFIX,ironsrc.com,REJECT
-  - DOMAIN-SUFFIX,pangle.com,REJECT
-  - DOMAIN-SUFFIX,unityads.com,REJECT
-  - DOMAIN-SUFFIX,clickzs.com,REJECT
-  - DOMAIN-SUFFIX,guohead.com,REJECT
-  - DOMAIN-SUFFIX,guomob.com,REJECT
-  - DOMAIN-SUFFIX,immob.cn,REJECT
-  - DOMAIN-SUFFIX,intely.cn,REJECT
-  - DOMAIN-SUFFIX,ipinyou.com,REJECT
-  - DOMAIN-SUFFIX,localytics.com,REJECT
-  - DOMAIN-SUFFIX,optaim.com,REJECT
-  - DOMAIN-SUFFIX,responsys.net,REJECT
-  - DOMAIN-SUFFIX,smartmad.com,REJECT
-  - DOMAIN-SUFFIX,switchadhub.com,REJECT
-  - DOMAIN-SUFFIX,unimhk.com,REJECT
-  - DOMAIN-SUFFIX,unlitui.com,REJECT
-  - DOMAIN-SUFFIX,uyunad.com,REJECT
-  - DOMAIN-SUFFIX,vamaker.com,REJECT
-  - DOMAIN-SUFFIX,waps.cn,REJECT
-  - DOMAIN-SUFFIX,wiyun.com,REJECT
-  - DOMAIN-SUFFIX,wooboo.com.cn,REJECT
-  - DOMAIN-SUFFIX,wqmobile.com,REJECT
-  - DOMAIN-SUFFIX,youmi.net,REJECT
-  - DOMAIN-SUFFIX,zhiziyun.com,REJECT
-  - DOMAIN-SUFFIX,segment.com,REJECT
-  #新浪（可能有多余项）
-  - DOMAIN-SUFFIX,ad.sina.com.cn,REJECT
-  - DOMAIN-SUFFIX,adm.leju.sina.com.cn,REJECT
-  - DOMAIN-SUFFIX,atm.sina.com,REJECT
-  - DOMAIN-SUFFIX,dcads.sina.com.cn,REJECT
-  - DOMAIN-SUFFIX,sax.sina.cn,REJECT
-  - DOMAIN-SUFFIX,sax.sina.com.cn,REJECT
-  - DOMAIN-SUFFIX,tjs.sjs.sinajs.cn,REJECT
-  #微博（可能有多余项）
-  - DOMAIN-SUFFIX,c.biz.weibo.com,REJECT
-  - DOMAIN-SUFFIX,game.weibo.com,REJECT
-  - DOMAIN-SUFFIX,c.wcpt.biz.weibo.com,REJECT
-  - DOMAIN-SUFFIX,s.alitui.weibo.com,REJECT
-  - DOMAIN-SUFFIX,zc.biz.weibo.com,REJECT
-  - DOMAIN-SUFFIX,zymo.mps.weibo.com,REJECT
-  - DOMAIN-SUFFIX,game.weibo.cn,REJECT
-  - DOMAIN-SUFFIX,m.game.weibo.cn,REJECT
-  - DOMAIN-SUFFIX,promote.biz.weibo.cn,REJECT
-  - DOMAIN-SUFFIX,adimg.mobile.sina.cn,REJECT
-  - DOMAIN-SUFFIX,newspush.sinajs.cn,REJECT
-  - DOMAIN-SUFFIX,sdkapp.mobile.sina.cn,REJECT
-  - DOMAIN-SUFFIX,sdkclick.mobile.sina.cn,REJECT
-  - DOMAIN-SUFFIX,trends.mobile.sina.cn,REJECT
-  - DOMAIN-SUFFIX,wbapp.mobile.sina.cn,REJECT
-  - DOMAIN-SUFFIX,wbclick.mobile.sina.cn,REJECT
-  - DOMAIN-SUFFIX,wbpctips.mobile.sina.cn,REJECT
-  - DOMAIN-SUFFIX,ota.pay.mobile.sina.cn,REJECT
-  - DOMAIN-SUFFIX,pay.mobile.sina.cn,REJECT
-  # 有道词典
-  - DOMAIN-SUFFIX,gorgon.youdao.com,REJECT
-  - DOMAIN-SUFFIX,impservice.youdao.com,REJECT
-  # 爱奇艺 PPS（可能有多余项）
-  - DOMAIN-SUFFIX,ad.m.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,afp.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,api.cupid.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,c.uaa.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,cloudpush.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,cm.passport.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,emoticon.sns.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,gamecenter.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,hotchat-im.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,ifacelog.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,mbdlog.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,meta.video.qiyi.com,REJECT
-  - DOMAIN-SUFFIX,paopao.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,policy.video.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,rcd.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,cmts.iqiyi.com,REJECT
-  - DOMAIN-SUFFIX,data.video.qiyi.com,REJECT
-  - DOMAIN-SUFFIX,msg.71.am,REJECT
-  - DOMAIN-SUFFIX,msga.cupid.iqiyi.com,REJECT
-  - IP-CIDR,101.227.14.80/29,REJECT,no-resolve
-  - IP-CIDR,101.227.200.0/22,REJECT,no-resolve
-  - IP-CIDR,112.13.64.0/22,REJECT,no-resolve
-  - IP-CIDR,112.253.36.0/24,REJECT,no-resolve
-  - IP-CIDR,117.139.16.0/22,REJECT,no-resolve
-  - IP-CIDR,117.139.18.141/22,REJECT,no-resolve
-  - IP-CIDR,119.188.13.32/29,REJECT,no-resolve
-  - IP-CIDR,119.188.172.192/28,REJECT,no-resolve
-  - IP-CIDR,119.188.173.0/27,REJECT,no-resolve
-  - IP-CIDR,119.188.43.61/32,REJECT,no-resolve
-  - IP-CIDR,123.125.116.0/22,REJECT,no-resolve
-  - IP-CIDR,123.125.117.0/22,REJECT,no-resolve
-  - IP-CIDR,123.130.122.128/28,REJECT,no-resolve
-  - IP-CIDR,183.221.244.0/22,REJECT,no-resolve
-  - IP-CIDR,183.221.247.189/22,REJECT,no-resolve
-  - IP-CIDR,27.221.89.128/28,REJECT,no-resolve
-  - IP-CIDR,60.211.171.128/29,REJECT,no-resolve
-  - IP-CIDR,60.211.211.1/32,REJECT,no-resolve
-  #99 提交的公告 未测试是否误杀
-  #以下为杭州公交 APP 的广告调用地址，含京东广告
-  - DOMAIN-SUFFIX,im-x.jd.com,REJECT
-  - DOMAIN-SUFFIX,ad.ipadview.com,REJECT
-  #以下为某些不可描述网站加载的乱七八糟广告
-  - DOMAIN-SUFFIX,maizhenai.cn,REJECT
-  - DOMAIN-SUFFIX,paomifen.cn,REJECT
-  - DOMAIN-SUFFIX,songlaoban.cn,REJECT
-  - DOMAIN-SUFFIX,09mk.cn,REJECT
-  - DOMAIN-SUFFIX,hepengshan.cn,REJECT
-  - DOMAIN-SUFFIX,epsilon.com,REJECT
-  - DOMAIN-SUFFIX,connexity.net,REJECT
-  - DOMAIN-SUFFIX,dualstack.adsame-1421766300.ap-southeast-1.elb.amazonaws.com,REJECT
-  - DOMAIN-SUFFIX,amaoshe.cn,REJECT
-  - DOMAIN-SUFFIX,yeshoutuan.cn,REJECT
-  - DOMAIN-SUFFIX,muxq8.cn,REJECT
-  - DOMAIN-SUFFIX,huanshawang.cn,REJECT
-  - DOMAIN-SUFFIX,v85968.cn,REJECT
-  #以下为广告联盟
-  - DOMAIN-SUFFIX,trc.taboola.com,REJECT
-  #付呗收款码支付后跳转到的广告地址（支付宝内）
-  - DOMAIN-SUFFIX,tuisnake.com,REJECT
-  - DOMAIN-SUFFIX,duiba.com.cn,REJECT
-  - DOMAIN-SUFFIX,dui88.com,REJECT
-  #喜马拉雅跟踪和广告
-  - DOMAIN-SUFFIX,location.ximalaya.com,REJECT
-  - DOMAIN-SUFFIX,adse.ximalaya.com,REJECT
-  - DOMAIN-SUFFIX,xdcs-collector.ximalaya.com,REJECT
-  #广告联盟
-  - DOMAIN-SUFFIX,inmobi.cn,REJECT
-  #169
-  - DOMAIN-SUFFIX,adx.hupu.com,REJECT
-  - DOMAIN-SUFFIX,kikibt8.com,REJECT
-  - DOMAIN-SUFFIX,kikibt8.xyz,REJECT
-  #用户提交
-  - DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
   # 手工定义的 Direct 列表
   #153
   - DOMAIN-SUFFIX,icloud-content.com,DIRECT
@@ -38787,6 +38787,283 @@ rules:
   - DOMAIN-SUFFIX,chillyroom.com,DIRECT
   # IHG Internet Access
   - DOMAIN-SUFFIX,portal.linkbroad.com,DIRECT
+  # top500 direct list update time: 2022-05-23 17:36:34
+  - DOMAIN-SUFFIX,20minutos.es,DIRECT
+  - DOMAIN-SUFFIX,abcnews.go.com,DIRECT
+  - DOMAIN-SUFFIX,aboutads.info,DIRECT
+  - DOMAIN-SUFFIX,abril.com.br,DIRECT
+  - DOMAIN-SUFFIX,academia.edu,DIRECT
+  - DOMAIN-SUFFIX,addthis.com,DIRECT
+  - DOMAIN-SUFFIX,adobe.com,DIRECT
+  - DOMAIN-SUFFIX,afternic.com,DIRECT
+  - DOMAIN-SUFFIX,airbnb.com,DIRECT
+  - DOMAIN-SUFFIX,alexa.com,DIRECT
+  - DOMAIN-SUFFIX,alibaba.com,DIRECT
+  - DOMAIN-SUFFIX,aliexpress.com,DIRECT
+  - DOMAIN-SUFFIX,amazon.ca,DIRECT
+  - DOMAIN-SUFFIX,amazon.co.uk,DIRECT
+  - DOMAIN-SUFFIX,amazon.com,DIRECT
+  - DOMAIN-SUFFIX,amazon.es,DIRECT
+  - DOMAIN-SUFFIX,amazon.fr,DIRECT
+  - DOMAIN-SUFFIX,aol.com,DIRECT
+  - DOMAIN-SUFFIX,apache.org,DIRECT
+  - DOMAIN-SUFFIX,apnews.com,DIRECT
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,arxiv.org,DIRECT
+  - DOMAIN-SUFFIX,as.com,DIRECT
+  - DOMAIN-SUFFIX,asus.com,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,berkeley.edu,DIRECT
+  - DOMAIN-SUFFIX,biblegateway.com,DIRECT
+  - DOMAIN-SUFFIX,biglobe.ne.jp,DIRECT
+  - DOMAIN-SUFFIX,billboard.com,DIRECT
+  - DOMAIN-SUFFIX,bing.com,DIRECT
+  - DOMAIN-SUFFIX,bitly.com,DIRECT
+  - DOMAIN-SUFFIX,blackberry.com,DIRECT
+  - DOMAIN-SUFFIX,blog.google,DIRECT
+  - DOMAIN-SUFFIX,booking.com,DIRECT
+  - DOMAIN-SUFFIX,boston.com,DIRECT
+  - DOMAIN-SUFFIX,britannica.com,DIRECT
+  - DOMAIN-SUFFIX,businesswire.com,DIRECT
+  - DOMAIN-SUFFIX,buydomains.com,DIRECT
+  - DOMAIN-SUFFIX,buzzfeed.com,DIRECT
+  - DOMAIN-SUFFIX,cambridge.org,DIRECT
+  - DOMAIN-SUFFIX,canva.com,DIRECT
+  - DOMAIN-SUFFIX,cbslocal.com,DIRECT
+  - DOMAIN-SUFFIX,cbsnews.com,DIRECT
+  - DOMAIN-SUFFIX,cdc.gov,DIRECT
+  - DOMAIN-SUFFIX,channel4.com,DIRECT
+  - DOMAIN-SUFFIX,clickbank.net,DIRECT
+  - DOMAIN-SUFFIX,cloudflare.com,DIRECT
+  - DOMAIN-SUFFIX,cnbc.com,DIRECT
+  - DOMAIN-SUFFIX,cnet.com,DIRECT
+  - DOMAIN-SUFFIX,cnil.fr,DIRECT
+  - DOMAIN-SUFFIX,cnn.com,DIRECT
+  - DOMAIN-SUFFIX,cointernet.com.co,DIRECT
+  - DOMAIN-SUFFIX,cornell.edu,DIRECT
+  - DOMAIN-SUFFIX,cpanel.com,DIRECT
+  - DOMAIN-SUFFIX,cpanel.net,DIRECT
+  - DOMAIN-SUFFIX,creativecommons.org,DIRECT
+  - DOMAIN-SUFFIX,ctvnews.ca,DIRECT
+  - DOMAIN-SUFFIX,dailystar.co.uk,DIRECT
+  - DOMAIN-SUFFIX,dan.com,DIRECT
+  - DOMAIN-SUFFIX,debian.org,DIRECT
+  - DOMAIN-SUFFIX,dell.com,DIRECT
+  - DOMAIN-SUFFIX,deloitte.com,DIRECT
+  - DOMAIN-SUFFIX,depositfiles.com,DIRECT
+  - DOMAIN-SUFFIX,detik.com,DIRECT
+  - DOMAIN-SUFFIX,dictionary.com,DIRECT
+  - DOMAIN-SUFFIX,disney.com,DIRECT
+  - DOMAIN-SUFFIX,doi.org,DIRECT
+  - DOMAIN-SUFFIX,domainmarket.com,DIRECT
+  - DOMAIN-SUFFIX,dreamstime.com,DIRECT
+  - DOMAIN-SUFFIX,dreniq.com,DIRECT
+  - DOMAIN-SUFFIX,e-monsite.com,DIRECT
+  - DOMAIN-SUFFIX,ea.com,DIRECT
+  - DOMAIN-SUFFIX,ebay.com,DIRECT
+  - DOMAIN-SUFFIX,elmundo.es,DIRECT
+  - DOMAIN-SUFFIX,elsevier.com,DIRECT
+  - DOMAIN-SUFFIX,enable-javascript.com,DIRECT
+  - DOMAIN-SUFFIX,engadget.com,DIRECT
+  - DOMAIN-SUFFIX,eonline.com,DIRECT
+  - DOMAIN-SUFFIX,estadao.com.br,DIRECT
+  - DOMAIN-SUFFIX,europa.eu,DIRECT
+  - DOMAIN-SUFFIX,eventbrite.com,DIRECT
+  - DOMAIN-SUFFIX,evernote.com,DIRECT
+  - DOMAIN-SUFFIX,example.com,DIRECT
+  - DOMAIN-SUFFIX,fandom.com,DIRECT
+  - DOMAIN-SUFFIX,fastcompany.com,DIRECT
+  - DOMAIN-SUFFIX,fifa.com,DIRECT
+  - DOMAIN-SUFFIX,finance.yahoo.com,DIRECT
+  - DOMAIN-SUFFIX,forms.gle,DIRECT
+  - DOMAIN-SUFFIX,fortune.com,DIRECT
+  - DOMAIN-SUFFIX,foursquare.com,DIRECT
+  - DOMAIN-SUFFIX,foxnews.com,DIRECT
+  - DOMAIN-SUFFIX,francetvinfo.fr,DIRECT
+  - DOMAIN-SUFFIX,ft.com,DIRECT
+  - DOMAIN-SUFFIX,ftc.gov,DIRECT
+  - DOMAIN-SUFFIX,geocities.jp,DIRECT
+  - DOMAIN-SUFFIX,gizmodo.com,DIRECT
+  - DOMAIN-SUFFIX,globo.com,DIRECT
+  - DOMAIN-SUFFIX,gnu.org,DIRECT
+  - DOMAIN-SUFFIX,godaddy.com,DIRECT
+  - DOMAIN-SUFFIX,gooyaabitemplates.com,DIRECT
+  - DOMAIN-SUFFIX,hatena.ne.jp,DIRECT
+  - DOMAIN-SUFFIX,hbr.org,DIRECT
+  - DOMAIN-SUFFIX,hollywoodreporter.com,DIRECT
+  - DOMAIN-SUFFIX,hp.com,DIRECT
+  - DOMAIN-SUFFIX,huawei.com,DIRECT
+  - DOMAIN-SUFFIX,hugedomains.com,DIRECT
+  - DOMAIN-SUFFIX,ibm.com,DIRECT
+  - DOMAIN-SUFFIX,icann.org,DIRECT
+  - DOMAIN-SUFFIX,ietf.org,DIRECT
+  - DOMAIN-SUFFIX,ikea.com,DIRECT
+  - DOMAIN-SUFFIX,imageshack.com,DIRECT
+  - DOMAIN-SUFFIX,imageshack.us,DIRECT
+  - DOMAIN-SUFFIX,imdb.com,DIRECT
+  - DOMAIN-SUFFIX,indianexpress.com,DIRECT
+  - DOMAIN-SUFFIX,indiatimes.com,DIRECT
+  - DOMAIN-SUFFIX,insider.com,DIRECT
+  - DOMAIN-SUFFIX,intel.com,DIRECT
+  - DOMAIN-SUFFIX,interia.pl,DIRECT
+  - DOMAIN-SUFFIX,iso.org,DIRECT
+  - DOMAIN-SUFFIX,jimdofree.com,DIRECT
+  - DOMAIN-SUFFIX,kickstarter.com,DIRECT
+  - DOMAIN-SUFFIX,kompas.com,DIRECT
+  - DOMAIN-SUFFIX,last.fm,DIRECT
+  - DOMAIN-SUFFIX,latimes.com,DIRECT
+  - DOMAIN-SUFFIX,lavanguardia.com,DIRECT
+  - DOMAIN-SUFFIX,lefigaro.fr,DIRECT
+  - DOMAIN-SUFFIX,lego.com,DIRECT
+  - DOMAIN-SUFFIX,lg.com,DIRECT
+  - DOMAIN-SUFFIX,linktr.ee,DIRECT
+  - DOMAIN-SUFFIX,list-manage.com,DIRECT
+  - DOMAIN-SUFFIX,live.com,DIRECT
+  - DOMAIN-SUFFIX,liveinternet.ru,DIRECT
+  - DOMAIN-SUFFIX,mail.ru,DIRECT
+  - DOMAIN-SUFFIX,mail.yahoo.com,DIRECT
+  - DOMAIN-SUFFIX,mailchimp.com,DIRECT
+  - DOMAIN-SUFFIX,marketwatch.com,DIRECT
+  - DOMAIN-SUFFIX,mashable.com,DIRECT
+  - DOMAIN-SUFFIX,mediafire.com,DIRECT
+  - DOMAIN-SUFFIX,merriam-webster.com,DIRECT
+  - DOMAIN-SUFFIX,metro.co.uk,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,mirror.co.uk,DIRECT
+  - DOMAIN-SUFFIX,mit.edu,DIRECT
+  - DOMAIN-SUFFIX,mozilla.com,DIRECT
+  - DOMAIN-SUFFIX,mozilla.org,DIRECT
+  - DOMAIN-SUFFIX,msn.com,DIRECT
+  - DOMAIN-SUFFIX,myspace.com,DIRECT
+  - DOMAIN-SUFFIX,mystrikingly.com,DIRECT
+  - DOMAIN-SUFFIX,namecheap.com,DIRECT
+  - DOMAIN-SUFFIX,nasa.gov,DIRECT
+  - DOMAIN-SUFFIX,nationalgeographic.com,DIRECT
+  - DOMAIN-SUFFIX,naver.com,DIRECT
+  - DOMAIN-SUFFIX,nba.com,DIRECT
+  - DOMAIN-SUFFIX,netlify.app,DIRECT
+  - DOMAIN-SUFFIX,networkadvertising.org,DIRECT
+  - DOMAIN-SUFFIX,news.yahoo.com,DIRECT
+  - DOMAIN-SUFFIX,nginx.org,DIRECT
+  - DOMAIN-SUFFIX,nhk.or.jp,DIRECT
+  - DOMAIN-SUFFIX,nih.gov,DIRECT
+  - DOMAIN-SUFFIX,nokia.com,DIRECT
+  - DOMAIN-SUFFIX,npr.org,DIRECT
+  - DOMAIN-SUFFIX,nps.gov,DIRECT
+  - DOMAIN-SUFFIX,office.com,DIRECT
+  - DOMAIN-SUFFIX,opera.com,DIRECT
+  - DOMAIN-SUFFIX,oracle.com,DIRECT
+  - DOMAIN-SUFFIX,orange.fr,DIRECT
+  - DOMAIN-SUFFIX,ouest-france.fr,DIRECT
+  - DOMAIN-SUFFIX,oup.com,DIRECT
+  - DOMAIN-SUFFIX,outlook.com,DIRECT
+  - DOMAIN-SUFFIX,ovh.co.uk,DIRECT
+  - DOMAIN-SUFFIX,ovh.com,DIRECT
+  - DOMAIN-SUFFIX,ovh.net,DIRECT
+  - DOMAIN-SUFFIX,ovhcloud.com,DIRECT
+  - DOMAIN-SUFFIX,ox.ac.uk,DIRECT
+  - DOMAIN-SUFFIX,paypal.com,DIRECT
+  - DOMAIN-SUFFIX,pbs.org,DIRECT
+  - DOMAIN-SUFFIX,people.com,DIRECT
+  - DOMAIN-SUFFIX,photobucket.com,DIRECT
+  - DOMAIN-SUFFIX,php.net,DIRECT
+  - DOMAIN-SUFFIX,pixabay.com,DIRECT
+  - DOMAIN-SUFFIX,playstation.com,DIRECT
+  - DOMAIN-SUFFIX,plesk.com,DIRECT
+  - DOMAIN-SUFFIX,plos.org,DIRECT
+  - DOMAIN-SUFFIX,politico.com,DIRECT
+  - DOMAIN-SUFFIX,prestashop.com,DIRECT
+  - DOMAIN-SUFFIX,prezi.com,DIRECT
+  - DOMAIN-SUFFIX,privacyshield.gov,DIRECT
+  - DOMAIN-SUFFIX,psychologytoday.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,rambler.ru,DIRECT
+  - DOMAIN-SUFFIX,rbc.ru,DIRECT
+  - DOMAIN-SUFFIX,repubblica.it,DIRECT
+  - DOMAIN-SUFFIX,ria.ru,DIRECT
+  - DOMAIN-SUFFIX,rt.com,DIRECT
+  - DOMAIN-SUFFIX,rtve.es,DIRECT
+  - DOMAIN-SUFFIX,sakura.ne.jp,DIRECT
+  - DOMAIN-SUFFIX,samsung.com,DIRECT
+  - DOMAIN-SUFFIX,sapo.pt,DIRECT
+  - DOMAIN-SUFFIX,sciencedaily.com,DIRECT
+  - DOMAIN-SUFFIX,sec.gov,DIRECT
+  - DOMAIN-SUFFIX,secureserver.net,DIRECT
+  - DOMAIN-SUFFIX,sedo.com,DIRECT
+  - DOMAIN-SUFFIX,seesaa.net,DIRECT
+  - DOMAIN-SUFFIX,sfgate.com,DIRECT
+  - DOMAIN-SUFFIX,sky.com,DIRECT
+  - DOMAIN-SUFFIX,skype.com,DIRECT
+  - DOMAIN-SUFFIX,so-net.ne.jp,DIRECT
+  - DOMAIN-SUFFIX,softonic.com,DIRECT
+  - DOMAIN-SUFFIX,sports.yahoo.com,DIRECT
+  - DOMAIN-SUFFIX,sputniknews.com,DIRECT
+  - DOMAIN-SUFFIX,standard.co.uk,DIRECT
+  - DOMAIN-SUFFIX,statista.com,DIRECT
+  - DOMAIN-SUFFIX,storage.googleapis.com,DIRECT
+  - DOMAIN-SUFFIX,stores.jp,DIRECT
+  - DOMAIN-SUFFIX,surveymonkey.com,DIRECT
+  - DOMAIN-SUFFIX,target.com,DIRECT
+  - DOMAIN-SUFFIX,techcrunch.com,DIRECT
+  - DOMAIN-SUFFIX,telegraph.co.uk,DIRECT
+  - DOMAIN-SUFFIX,terra.com.br,DIRECT
+  - DOMAIN-SUFFIX,tes.com,DIRECT
+  - DOMAIN-SUFFIX,themeforest.net,DIRECT
+  - DOMAIN-SUFFIX,thenai.org,DIRECT
+  - DOMAIN-SUFFIX,thesun.co.uk,DIRECT
+  - DOMAIN-SUFFIX,thetimes.co.uk,DIRECT
+  - DOMAIN-SUFFIX,thoughtco.com,DIRECT
+  - DOMAIN-SUFFIX,tmz.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tools.google.com,DIRECT
+  - DOMAIN-SUFFIX,tripadvisor.com,DIRECT
+  - DOMAIN-SUFFIX,trustpilot.com,DIRECT
+  - DOMAIN-SUFFIX,ubuntu.com,DIRECT
+  - DOMAIN-SUFFIX,ucla.edu,DIRECT
+  - DOMAIN-SUFFIX,ucoz.ru,DIRECT
+  - DOMAIN-SUFFIX,uefa.com,DIRECT
+  - DOMAIN-SUFFIX,un.org,DIRECT
+  - DOMAIN-SUFFIX,unesco.org,DIRECT
+  - DOMAIN-SUFFIX,unicef.org,DIRECT
+  - DOMAIN-SUFFIX,unsplash.com,DIRECT
+  - DOMAIN-SUFFIX,uol.com.br,DIRECT
+  - DOMAIN-SUFFIX,urbandictionary.com,DIRECT
+  - DOMAIN-SUFFIX,usatoday.com,DIRECT
+  - DOMAIN-SUFFIX,usgs.gov,DIRECT
+  - DOMAIN-SUFFIX,usnews.com,DIRECT
+  - DOMAIN-SUFFIX,utexas.edu,DIRECT
+  - DOMAIN-SUFFIX,variety.com,DIRECT
+  - DOMAIN-SUFFIX,vice.com,DIRECT
+  - DOMAIN-SUFFIX,vk.com,DIRECT
+  - DOMAIN-SUFFIX,vmware.com,DIRECT
+  - DOMAIN-SUFFIX,w3.org,DIRECT
+  - DOMAIN-SUFFIX,walmart.com,DIRECT
+  - DOMAIN-SUFFIX,washington.edu,DIRECT
+  - DOMAIN-SUFFIX,webmd.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,whitehouse.gov,DIRECT
+  - DOMAIN-SUFFIX,who.int,DIRECT
+  - DOMAIN-SUFFIX,wikia.com,DIRECT
+  - DOMAIN-SUFFIX,wiley.com,DIRECT
+  - DOMAIN-SUFFIX,wired.com,DIRECT
+  - DOMAIN-SUFFIX,woocommerce.com,DIRECT
+  - DOMAIN-SUFFIX,wordpress.org,DIRECT
+  - DOMAIN-SUFFIX,worldbank.org,DIRECT
+  - DOMAIN-SUFFIX,wp.com,DIRECT
+  - DOMAIN-SUFFIX,www.gov.br,DIRECT
+  - DOMAIN-SUFFIX,www.gov.uk,DIRECT
+  - DOMAIN-SUFFIX,www.livejournal.com,DIRECT
+  - DOMAIN-SUFFIX,www.over-blog.com,DIRECT
+  - DOMAIN-SUFFIX,www.wix.com,DIRECT
+  - DOMAIN-SUFFIX,www.yahoo.com,DIRECT
+  - DOMAIN-SUFFIX,yahoo.co.jp,DIRECT
+  - DOMAIN-SUFFIX,yandex.net,DIRECT
+  - DOMAIN-SUFFIX,yandex.ru,DIRECT
+  - DOMAIN-SUFFIX,yelp.com,DIRECT
+  - DOMAIN-SUFFIX,youronlinechoices.com,DIRECT
+  - DOMAIN-SUFFIX,zendesk.com,DIRECT
+  - DOMAIN-SUFFIX,ziddu.com,DIRECT
+  - DOMAIN-SUFFIX,zoom.us,DIRECT
   # 手工定义的 Proxy 列表
   # TED
   - DOMAIN-SUFFIX,tedcdn.com,PROXY
@@ -39249,283 +39526,6 @@ rules:
   #TrustWallet
   - DOMAIN-SUFFIX,trustwallet.com,PROXY
   - DOMAIN-SUFFIX,walletconnect.org,PROXY
-  # top500 direct list update time: 2022-05-23 17:36:34
-  - DOMAIN-SUFFIX,20minutos.es,DIRECT
-  - DOMAIN-SUFFIX,abcnews.go.com,DIRECT
-  - DOMAIN-SUFFIX,aboutads.info,DIRECT
-  - DOMAIN-SUFFIX,abril.com.br,DIRECT
-  - DOMAIN-SUFFIX,academia.edu,DIRECT
-  - DOMAIN-SUFFIX,addthis.com,DIRECT
-  - DOMAIN-SUFFIX,adobe.com,DIRECT
-  - DOMAIN-SUFFIX,afternic.com,DIRECT
-  - DOMAIN-SUFFIX,airbnb.com,DIRECT
-  - DOMAIN-SUFFIX,alexa.com,DIRECT
-  - DOMAIN-SUFFIX,alibaba.com,DIRECT
-  - DOMAIN-SUFFIX,aliexpress.com,DIRECT
-  - DOMAIN-SUFFIX,amazon.ca,DIRECT
-  - DOMAIN-SUFFIX,amazon.co.uk,DIRECT
-  - DOMAIN-SUFFIX,amazon.com,DIRECT
-  - DOMAIN-SUFFIX,amazon.es,DIRECT
-  - DOMAIN-SUFFIX,amazon.fr,DIRECT
-  - DOMAIN-SUFFIX,aol.com,DIRECT
-  - DOMAIN-SUFFIX,apache.org,DIRECT
-  - DOMAIN-SUFFIX,apnews.com,DIRECT
-  - DOMAIN-SUFFIX,apple.com,DIRECT
-  - DOMAIN-SUFFIX,arxiv.org,DIRECT
-  - DOMAIN-SUFFIX,as.com,DIRECT
-  - DOMAIN-SUFFIX,asus.com,DIRECT
-  - DOMAIN-SUFFIX,baidu.com,DIRECT
-  - DOMAIN-SUFFIX,berkeley.edu,DIRECT
-  - DOMAIN-SUFFIX,biblegateway.com,DIRECT
-  - DOMAIN-SUFFIX,biglobe.ne.jp,DIRECT
-  - DOMAIN-SUFFIX,billboard.com,DIRECT
-  - DOMAIN-SUFFIX,bing.com,DIRECT
-  - DOMAIN-SUFFIX,bitly.com,DIRECT
-  - DOMAIN-SUFFIX,blackberry.com,DIRECT
-  - DOMAIN-SUFFIX,blog.google,DIRECT
-  - DOMAIN-SUFFIX,booking.com,DIRECT
-  - DOMAIN-SUFFIX,boston.com,DIRECT
-  - DOMAIN-SUFFIX,britannica.com,DIRECT
-  - DOMAIN-SUFFIX,businesswire.com,DIRECT
-  - DOMAIN-SUFFIX,buydomains.com,DIRECT
-  - DOMAIN-SUFFIX,buzzfeed.com,DIRECT
-  - DOMAIN-SUFFIX,cambridge.org,DIRECT
-  - DOMAIN-SUFFIX,canva.com,DIRECT
-  - DOMAIN-SUFFIX,cbslocal.com,DIRECT
-  - DOMAIN-SUFFIX,cbsnews.com,DIRECT
-  - DOMAIN-SUFFIX,cdc.gov,DIRECT
-  - DOMAIN-SUFFIX,channel4.com,DIRECT
-  - DOMAIN-SUFFIX,clickbank.net,DIRECT
-  - DOMAIN-SUFFIX,cloudflare.com,DIRECT
-  - DOMAIN-SUFFIX,cnbc.com,DIRECT
-  - DOMAIN-SUFFIX,cnet.com,DIRECT
-  - DOMAIN-SUFFIX,cnil.fr,DIRECT
-  - DOMAIN-SUFFIX,cnn.com,DIRECT
-  - DOMAIN-SUFFIX,cointernet.com.co,DIRECT
-  - DOMAIN-SUFFIX,cornell.edu,DIRECT
-  - DOMAIN-SUFFIX,cpanel.com,DIRECT
-  - DOMAIN-SUFFIX,cpanel.net,DIRECT
-  - DOMAIN-SUFFIX,creativecommons.org,DIRECT
-  - DOMAIN-SUFFIX,ctvnews.ca,DIRECT
-  - DOMAIN-SUFFIX,dailystar.co.uk,DIRECT
-  - DOMAIN-SUFFIX,dan.com,DIRECT
-  - DOMAIN-SUFFIX,debian.org,DIRECT
-  - DOMAIN-SUFFIX,dell.com,DIRECT
-  - DOMAIN-SUFFIX,deloitte.com,DIRECT
-  - DOMAIN-SUFFIX,depositfiles.com,DIRECT
-  - DOMAIN-SUFFIX,detik.com,DIRECT
-  - DOMAIN-SUFFIX,dictionary.com,DIRECT
-  - DOMAIN-SUFFIX,disney.com,DIRECT
-  - DOMAIN-SUFFIX,doi.org,DIRECT
-  - DOMAIN-SUFFIX,domainmarket.com,DIRECT
-  - DOMAIN-SUFFIX,dreamstime.com,DIRECT
-  - DOMAIN-SUFFIX,dreniq.com,DIRECT
-  - DOMAIN-SUFFIX,e-monsite.com,DIRECT
-  - DOMAIN-SUFFIX,ea.com,DIRECT
-  - DOMAIN-SUFFIX,ebay.com,DIRECT
-  - DOMAIN-SUFFIX,elmundo.es,DIRECT
-  - DOMAIN-SUFFIX,elsevier.com,DIRECT
-  - DOMAIN-SUFFIX,enable-javascript.com,DIRECT
-  - DOMAIN-SUFFIX,engadget.com,DIRECT
-  - DOMAIN-SUFFIX,eonline.com,DIRECT
-  - DOMAIN-SUFFIX,estadao.com.br,DIRECT
-  - DOMAIN-SUFFIX,europa.eu,DIRECT
-  - DOMAIN-SUFFIX,eventbrite.com,DIRECT
-  - DOMAIN-SUFFIX,evernote.com,DIRECT
-  - DOMAIN-SUFFIX,example.com,DIRECT
-  - DOMAIN-SUFFIX,fandom.com,DIRECT
-  - DOMAIN-SUFFIX,fastcompany.com,DIRECT
-  - DOMAIN-SUFFIX,fifa.com,DIRECT
-  - DOMAIN-SUFFIX,finance.yahoo.com,DIRECT
-  - DOMAIN-SUFFIX,forms.gle,DIRECT
-  - DOMAIN-SUFFIX,fortune.com,DIRECT
-  - DOMAIN-SUFFIX,foursquare.com,DIRECT
-  - DOMAIN-SUFFIX,foxnews.com,DIRECT
-  - DOMAIN-SUFFIX,francetvinfo.fr,DIRECT
-  - DOMAIN-SUFFIX,ft.com,DIRECT
-  - DOMAIN-SUFFIX,ftc.gov,DIRECT
-  - DOMAIN-SUFFIX,geocities.jp,DIRECT
-  - DOMAIN-SUFFIX,gizmodo.com,DIRECT
-  - DOMAIN-SUFFIX,globo.com,DIRECT
-  - DOMAIN-SUFFIX,gnu.org,DIRECT
-  - DOMAIN-SUFFIX,godaddy.com,DIRECT
-  - DOMAIN-SUFFIX,gooyaabitemplates.com,DIRECT
-  - DOMAIN-SUFFIX,hatena.ne.jp,DIRECT
-  - DOMAIN-SUFFIX,hbr.org,DIRECT
-  - DOMAIN-SUFFIX,hollywoodreporter.com,DIRECT
-  - DOMAIN-SUFFIX,hp.com,DIRECT
-  - DOMAIN-SUFFIX,huawei.com,DIRECT
-  - DOMAIN-SUFFIX,hugedomains.com,DIRECT
-  - DOMAIN-SUFFIX,ibm.com,DIRECT
-  - DOMAIN-SUFFIX,icann.org,DIRECT
-  - DOMAIN-SUFFIX,ietf.org,DIRECT
-  - DOMAIN-SUFFIX,ikea.com,DIRECT
-  - DOMAIN-SUFFIX,imageshack.com,DIRECT
-  - DOMAIN-SUFFIX,imageshack.us,DIRECT
-  - DOMAIN-SUFFIX,imdb.com,DIRECT
-  - DOMAIN-SUFFIX,indianexpress.com,DIRECT
-  - DOMAIN-SUFFIX,indiatimes.com,DIRECT
-  - DOMAIN-SUFFIX,insider.com,DIRECT
-  - DOMAIN-SUFFIX,intel.com,DIRECT
-  - DOMAIN-SUFFIX,interia.pl,DIRECT
-  - DOMAIN-SUFFIX,iso.org,DIRECT
-  - DOMAIN-SUFFIX,jimdofree.com,DIRECT
-  - DOMAIN-SUFFIX,kickstarter.com,DIRECT
-  - DOMAIN-SUFFIX,kompas.com,DIRECT
-  - DOMAIN-SUFFIX,last.fm,DIRECT
-  - DOMAIN-SUFFIX,latimes.com,DIRECT
-  - DOMAIN-SUFFIX,lavanguardia.com,DIRECT
-  - DOMAIN-SUFFIX,lefigaro.fr,DIRECT
-  - DOMAIN-SUFFIX,lego.com,DIRECT
-  - DOMAIN-SUFFIX,lg.com,DIRECT
-  - DOMAIN-SUFFIX,linktr.ee,DIRECT
-  - DOMAIN-SUFFIX,list-manage.com,DIRECT
-  - DOMAIN-SUFFIX,live.com,DIRECT
-  - DOMAIN-SUFFIX,liveinternet.ru,DIRECT
-  - DOMAIN-SUFFIX,mail.ru,DIRECT
-  - DOMAIN-SUFFIX,mail.yahoo.com,DIRECT
-  - DOMAIN-SUFFIX,mailchimp.com,DIRECT
-  - DOMAIN-SUFFIX,marketwatch.com,DIRECT
-  - DOMAIN-SUFFIX,mashable.com,DIRECT
-  - DOMAIN-SUFFIX,mediafire.com,DIRECT
-  - DOMAIN-SUFFIX,merriam-webster.com,DIRECT
-  - DOMAIN-SUFFIX,metro.co.uk,DIRECT
-  - DOMAIN-SUFFIX,microsoft.com,DIRECT
-  - DOMAIN-SUFFIX,mirror.co.uk,DIRECT
-  - DOMAIN-SUFFIX,mit.edu,DIRECT
-  - DOMAIN-SUFFIX,mozilla.com,DIRECT
-  - DOMAIN-SUFFIX,mozilla.org,DIRECT
-  - DOMAIN-SUFFIX,msn.com,DIRECT
-  - DOMAIN-SUFFIX,myspace.com,DIRECT
-  - DOMAIN-SUFFIX,mystrikingly.com,DIRECT
-  - DOMAIN-SUFFIX,namecheap.com,DIRECT
-  - DOMAIN-SUFFIX,nasa.gov,DIRECT
-  - DOMAIN-SUFFIX,nationalgeographic.com,DIRECT
-  - DOMAIN-SUFFIX,naver.com,DIRECT
-  - DOMAIN-SUFFIX,nba.com,DIRECT
-  - DOMAIN-SUFFIX,netlify.app,DIRECT
-  - DOMAIN-SUFFIX,networkadvertising.org,DIRECT
-  - DOMAIN-SUFFIX,news.yahoo.com,DIRECT
-  - DOMAIN-SUFFIX,nginx.org,DIRECT
-  - DOMAIN-SUFFIX,nhk.or.jp,DIRECT
-  - DOMAIN-SUFFIX,nih.gov,DIRECT
-  - DOMAIN-SUFFIX,nokia.com,DIRECT
-  - DOMAIN-SUFFIX,npr.org,DIRECT
-  - DOMAIN-SUFFIX,nps.gov,DIRECT
-  - DOMAIN-SUFFIX,office.com,DIRECT
-  - DOMAIN-SUFFIX,opera.com,DIRECT
-  - DOMAIN-SUFFIX,oracle.com,DIRECT
-  - DOMAIN-SUFFIX,orange.fr,DIRECT
-  - DOMAIN-SUFFIX,ouest-france.fr,DIRECT
-  - DOMAIN-SUFFIX,oup.com,DIRECT
-  - DOMAIN-SUFFIX,outlook.com,DIRECT
-  - DOMAIN-SUFFIX,ovh.co.uk,DIRECT
-  - DOMAIN-SUFFIX,ovh.com,DIRECT
-  - DOMAIN-SUFFIX,ovh.net,DIRECT
-  - DOMAIN-SUFFIX,ovhcloud.com,DIRECT
-  - DOMAIN-SUFFIX,ox.ac.uk,DIRECT
-  - DOMAIN-SUFFIX,paypal.com,DIRECT
-  - DOMAIN-SUFFIX,pbs.org,DIRECT
-  - DOMAIN-SUFFIX,people.com,DIRECT
-  - DOMAIN-SUFFIX,photobucket.com,DIRECT
-  - DOMAIN-SUFFIX,php.net,DIRECT
-  - DOMAIN-SUFFIX,pixabay.com,DIRECT
-  - DOMAIN-SUFFIX,playstation.com,DIRECT
-  - DOMAIN-SUFFIX,plesk.com,DIRECT
-  - DOMAIN-SUFFIX,plos.org,DIRECT
-  - DOMAIN-SUFFIX,politico.com,DIRECT
-  - DOMAIN-SUFFIX,prestashop.com,DIRECT
-  - DOMAIN-SUFFIX,prezi.com,DIRECT
-  - DOMAIN-SUFFIX,privacyshield.gov,DIRECT
-  - DOMAIN-SUFFIX,psychologytoday.com,DIRECT
-  - DOMAIN-SUFFIX,qq.com,DIRECT
-  - DOMAIN-SUFFIX,rambler.ru,DIRECT
-  - DOMAIN-SUFFIX,rbc.ru,DIRECT
-  - DOMAIN-SUFFIX,repubblica.it,DIRECT
-  - DOMAIN-SUFFIX,ria.ru,DIRECT
-  - DOMAIN-SUFFIX,rt.com,DIRECT
-  - DOMAIN-SUFFIX,rtve.es,DIRECT
-  - DOMAIN-SUFFIX,sakura.ne.jp,DIRECT
-  - DOMAIN-SUFFIX,samsung.com,DIRECT
-  - DOMAIN-SUFFIX,sapo.pt,DIRECT
-  - DOMAIN-SUFFIX,sciencedaily.com,DIRECT
-  - DOMAIN-SUFFIX,sec.gov,DIRECT
-  - DOMAIN-SUFFIX,secureserver.net,DIRECT
-  - DOMAIN-SUFFIX,sedo.com,DIRECT
-  - DOMAIN-SUFFIX,seesaa.net,DIRECT
-  - DOMAIN-SUFFIX,sfgate.com,DIRECT
-  - DOMAIN-SUFFIX,sky.com,DIRECT
-  - DOMAIN-SUFFIX,skype.com,DIRECT
-  - DOMAIN-SUFFIX,so-net.ne.jp,DIRECT
-  - DOMAIN-SUFFIX,softonic.com,DIRECT
-  - DOMAIN-SUFFIX,sports.yahoo.com,DIRECT
-  - DOMAIN-SUFFIX,sputniknews.com,DIRECT
-  - DOMAIN-SUFFIX,standard.co.uk,DIRECT
-  - DOMAIN-SUFFIX,statista.com,DIRECT
-  - DOMAIN-SUFFIX,storage.googleapis.com,DIRECT
-  - DOMAIN-SUFFIX,stores.jp,DIRECT
-  - DOMAIN-SUFFIX,surveymonkey.com,DIRECT
-  - DOMAIN-SUFFIX,target.com,DIRECT
-  - DOMAIN-SUFFIX,techcrunch.com,DIRECT
-  - DOMAIN-SUFFIX,telegraph.co.uk,DIRECT
-  - DOMAIN-SUFFIX,terra.com.br,DIRECT
-  - DOMAIN-SUFFIX,tes.com,DIRECT
-  - DOMAIN-SUFFIX,themeforest.net,DIRECT
-  - DOMAIN-SUFFIX,thenai.org,DIRECT
-  - DOMAIN-SUFFIX,thesun.co.uk,DIRECT
-  - DOMAIN-SUFFIX,thetimes.co.uk,DIRECT
-  - DOMAIN-SUFFIX,thoughtco.com,DIRECT
-  - DOMAIN-SUFFIX,tmz.com,DIRECT
-  - DOMAIN-SUFFIX,taobao.com,DIRECT
-  - DOMAIN-SUFFIX,tools.google.com,DIRECT
-  - DOMAIN-SUFFIX,tripadvisor.com,DIRECT
-  - DOMAIN-SUFFIX,trustpilot.com,DIRECT
-  - DOMAIN-SUFFIX,ubuntu.com,DIRECT
-  - DOMAIN-SUFFIX,ucla.edu,DIRECT
-  - DOMAIN-SUFFIX,ucoz.ru,DIRECT
-  - DOMAIN-SUFFIX,uefa.com,DIRECT
-  - DOMAIN-SUFFIX,un.org,DIRECT
-  - DOMAIN-SUFFIX,unesco.org,DIRECT
-  - DOMAIN-SUFFIX,unicef.org,DIRECT
-  - DOMAIN-SUFFIX,unsplash.com,DIRECT
-  - DOMAIN-SUFFIX,uol.com.br,DIRECT
-  - DOMAIN-SUFFIX,urbandictionary.com,DIRECT
-  - DOMAIN-SUFFIX,usatoday.com,DIRECT
-  - DOMAIN-SUFFIX,usgs.gov,DIRECT
-  - DOMAIN-SUFFIX,usnews.com,DIRECT
-  - DOMAIN-SUFFIX,utexas.edu,DIRECT
-  - DOMAIN-SUFFIX,variety.com,DIRECT
-  - DOMAIN-SUFFIX,vice.com,DIRECT
-  - DOMAIN-SUFFIX,vk.com,DIRECT
-  - DOMAIN-SUFFIX,vmware.com,DIRECT
-  - DOMAIN-SUFFIX,w3.org,DIRECT
-  - DOMAIN-SUFFIX,walmart.com,DIRECT
-  - DOMAIN-SUFFIX,washington.edu,DIRECT
-  - DOMAIN-SUFFIX,webmd.com,DIRECT
-  - DOMAIN-SUFFIX,weibo.com,DIRECT
-  - DOMAIN-SUFFIX,whitehouse.gov,DIRECT
-  - DOMAIN-SUFFIX,who.int,DIRECT
-  - DOMAIN-SUFFIX,wikia.com,DIRECT
-  - DOMAIN-SUFFIX,wiley.com,DIRECT
-  - DOMAIN-SUFFIX,wired.com,DIRECT
-  - DOMAIN-SUFFIX,woocommerce.com,DIRECT
-  - DOMAIN-SUFFIX,wordpress.org,DIRECT
-  - DOMAIN-SUFFIX,worldbank.org,DIRECT
-  - DOMAIN-SUFFIX,wp.com,DIRECT
-  - DOMAIN-SUFFIX,www.gov.br,DIRECT
-  - DOMAIN-SUFFIX,www.gov.uk,DIRECT
-  - DOMAIN-SUFFIX,www.livejournal.com,DIRECT
-  - DOMAIN-SUFFIX,www.over-blog.com,DIRECT
-  - DOMAIN-SUFFIX,www.wix.com,DIRECT
-  - DOMAIN-SUFFIX,www.yahoo.com,DIRECT
-  - DOMAIN-SUFFIX,yahoo.co.jp,DIRECT
-  - DOMAIN-SUFFIX,yandex.net,DIRECT
-  - DOMAIN-SUFFIX,yandex.ru,DIRECT
-  - DOMAIN-SUFFIX,yelp.com,DIRECT
-  - DOMAIN-SUFFIX,youronlinechoices.com,DIRECT
-  - DOMAIN-SUFFIX,zendesk.com,DIRECT
-  - DOMAIN-SUFFIX,ziddu.com,DIRECT
-  - DOMAIN-SUFFIX,zoom.us,DIRECT
   - DOMAIN-SUFFIX,181217.xyz,PROXY
   - DOMAIN-SUFFIX,d1n1i82h9m6ov4.cloudfront.net,PROXY
   - DOMAIN-SUFFIX,onlinecha.com,PROXY
@@ -76602,8 +76602,7 @@ rules:
   - DOMAIN-SUFFIX,apple.news,PROXY
   - DOMAIN-SUFFIX,news-edge.apple.com,PROXY
   - DOMAIN-SUFFIX,news-events.apple.com,PROXY
-  # China direct
+  # China direct and fallback proxy
   - DOMAIN-SUFFIX,cn,DIRECT
   - GEOIP,CN,DIRECT
-  # Fallback proxy
   - MATCH,PROXY
