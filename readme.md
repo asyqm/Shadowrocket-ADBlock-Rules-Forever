@@ -325,9 +325,13 @@ INTP | Jack of all trades | I use Arch BTW
 
 - 适合已经在 Clash Verge 中导入 `Bitz+Net` 订阅的场景
 - 使用当前订阅实际策略组名 `Bitz Net`
-- 通过订阅的 Rules Enhancement/编辑规则使用，而不是作为新的 Profile URL 导入
+- 推荐通过订阅的 Script Enhancement/编辑脚本使用，脚本会自动跳过当前订阅里已经存在的规则
+- 如需手工粘贴规则，也可以使用 Rules Enhancement/编辑规则版本
+- 不是作为新的 Profile URL 导入
 
-规则地址：<https://raw.githubusercontent.com/asyqm/Shadowrocket-ADBlock-Rules-Forever/release/clash_verge_bitznet_rules.yaml>
+脚本增强地址：<https://raw.githubusercontent.com/asyqm/Shadowrocket-ADBlock-Rules-Forever/release/clash_verge_bitznet_script.js>
+
+规则增强地址：<https://raw.githubusercontent.com/asyqm/Shadowrocket-ADBlock-Rules-Forever/release/clash_verge_bitznet_rules.yaml>
 
 
 ## 鸣谢
